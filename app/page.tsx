@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
 import CardProject from "@/components/card-project";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
       {/* lg:py-32 lg:px-16 */}
-      <main className="flex min-h-screen w-full max-w-7xl flex-col items-center justify-between px-8  sm:items-start md:flex-row md:gap-16 lg:gap-32">
-        <div id="left" className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-32 md:w-1/2">
-          <h1 className="text-5xl font-bold tracking-wider mb-1">Aziz Ktata</h1>
+      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16 ">
+        <div id="left" className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-32 md:w-1/2 mb-16 ">
+          <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold tracking-wider mb-1">Aziz Ktata</h1>
           <h3 className="text-lg mb-4">Full stack developer</h3>
           <p className="text-sm max-w-lg text-foreground mb-12">
             I design, build web applications for businesses 
@@ -28,9 +29,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="right" className="flex flex-col py-32 ">
+        <div id="right" className="flex flex-col md:py-32 ">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
-          <p className="text-sm max-w-xl md:max-w-md text-foreground mb-12">
+          <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground mb-12">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry&apos;s standard dummy
             text ever since the 1500s, when an unknown printer took a galley of
@@ -38,7 +39,7 @@ export default function Home() {
           </p>
 
           <div id="projects" className="">
-            <h2 className="text-md font-bold mb-6 uppercase">Projects</h2>
+            <h2 className="text-md font-bold mb-4 uppercase">Projects</h2>
 
             <CardProject
               title="Built property rental management system"
@@ -65,6 +66,19 @@ export default function Home() {
                 "PostgreSQL",
               ]}
             />
+
+            <Link href="/projects">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-fit text-primary border-primary hover:bg-primary/10 my-4 "
+              >
+                View all projects   <ArrowUpRight
+              size={16}
+              className=" ml-2"
+            />
+              </Button>
+            </Link>
           </div>
         </div>
       </main>
