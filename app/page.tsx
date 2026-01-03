@@ -5,15 +5,18 @@ import CardProject from "@/components/card-project";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import CardExperiance from "@/components/card-experiance";
+import CarouselLogos from "@/components/carousel-logos";
+
 
 export default function Home() {
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
       {/* lg:py-32 lg:px-16 */}
-      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16 ">
+      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16  ">
         <div
           id="left"
-          className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-32 md:w-1/2 mb-16 "
+          className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-24  md:w-1/2 mb-16 "
         >
           <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold tracking-wider mb-1">
             Aziz Ktata
@@ -22,7 +25,7 @@ export default function Home() {
           <p className="text-sm max-w-lg text-foreground mb-12">
             I design, build web applications for businesses
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 mb-8">
             <Button
               variant="outline"
               size="lg"
@@ -35,8 +38,9 @@ export default function Home() {
               <Github />
             </div>
           </div>
+         <CarouselLogos />
         </div>
-        <div id="right" className="flex flex-col md:py-32 ">
+        <div id="right" className="flex flex-col md:py-24 ">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
           <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground mb-12">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -100,7 +104,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-fit text-primary border-primary hover:bg-primary/10 mb-4 "
+                className="w-fit text-primary border-primary hover:bg-primary/10 mb-4 md:mb-0 "
               >
                 View all projects <ArrowUpRight size={16} className=" ml-2" />
               </Button>
