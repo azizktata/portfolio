@@ -1,5 +1,6 @@
 import React from "react";
 import { Badge } from "./ui/badge";
+import { Triangle, TriangleRight } from "lucide-react";
 
 export default function CardExperiance({
   timeline,
@@ -9,7 +10,7 @@ export default function CardExperiance({
 }: {
   timeline: string;
   position: string;
-  description: string;
+  description: string[];
   techStack: string[];
 }) {
   return (
@@ -23,8 +24,21 @@ export default function CardExperiance({
           {timeline}
         </h3>
         <div className="flex flex-col items-start gap-4">
-          <h4 className="font-bold text-lg group-hover:text-primary transition-colors duration-200">{position}</h4>
-          <p className="text-sm max-w-lg text-foreground">{description}</p>
+          <h4 className="font-bold text-md group-hover:text-primary transition-colors duration-200">
+            {position}
+          </h4>
+          <ul className="text-sm max-w-lg text-foreground list-disc list-inside space-y-2">
+            {
+              description.map((point, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <Triangle size={14} className="rotate-90 mt-1 text-primary" />{" "}
+                  {point}
+                </li>
+              ))
+            }
+           
+             
+          </ul>
           <div className="flex flex-wrap gap-2">
             {techStack.map((tech) => (
               <Badge
