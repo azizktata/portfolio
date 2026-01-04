@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from "react";
 import {
@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
+import { SiGithub } from "react-icons/si";
 
 export default function CardProjectV2({ inverted = false }: { inverted?: boolean }) {
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
@@ -32,7 +33,7 @@ export default function CardProjectV2({ inverted = false }: { inverted?: boolean
         </div>
         <div className="bg-background/80 absolute inset-0"></div>
         <div className="absolute inset-0 self-center p-4 rounded-lg  px-6 sm:px-8 py-8 ">
-          <p className="text-xs text-foreground font-medium">Saas Platform</p>
+          <p className="text-xs text-primary font-medium">Saas Platform</p>
           <h3 className="text-xl font-bold mb-6 sm:mb-8">
             Property Rental Management
           </h3>
@@ -77,13 +78,13 @@ export default function CardProjectV2({ inverted = false }: { inverted?: boolean
       <div  className="flex items-center">
         <div className={cn("flex flex-col items-start -mr-16 z-10 order-1", inverted && "flex-col items-end -ml-16 -mr-0 order-2")}>
           <div className={cn("mb-6 sm:mb-8", inverted && "text-right")}>
-            <p className="text-xs text-foreground font-medium">Saas Platform</p>
+            <p className="text-sm text-foreground text-primary font-medium">Saas Platform</p>
             <h3 className="text-xl font-bold ">
               Property Rental Management
             </h3>
           </div>
 
-          <div className="w-full max-w-md bg-background/80 rounded-md shadow-md mb-6 sm:mb-8 ">
+          <div className="w-full max-w-md bg-gray-300/10 backdrop-blur-lg shadow-md dark:bg-background-secondary/50 rounded-md  mb-6 sm:mb-8 ">
             <p className="text-sm p-6">
               A comprehensive property management platform that streamlines
               rental processes for landlords and tenants. lorem ipsum dolor sit
@@ -107,8 +108,12 @@ export default function CardProjectV2({ inverted = false }: { inverted?: boolean
             </Badge>
           </div>
           <div className="flex items-center gap-4">
-            <Github size={24} />
+            <Link href="#" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
+            <SiGithub size={24} />
+            </Link>
+            <Link href="#" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
             <SquareArrowOutUpRight size={24} />
+            </Link>
           </div>
         </div>
         <div className={cn("max-w-md lg:max-w-lg xl:max-w-xl order-2", inverted && "order-1")}>

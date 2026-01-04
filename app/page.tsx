@@ -1,19 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { ArrowUpRight} from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
 import CardProject from "@/components/card-project";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import CardExperiance from "@/components/card-experiance";
 import CarouselLogos from "@/components/carousel-logos";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 
 export default function Home() {
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background ">
+    <div className="flex min-h-screen items-center justify-center bg-background relative">
       {/* lg:py-32 lg:px-16 */}
-      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16  ">
+     
+
+       <div
+    className="
+    pointer-events-none
+    absolute inset-x-0 bottom-0 h-5/6
+    dark:bg-[radial-gradient(ellipse_at_bottom,rgba(0,152,255,0.2),transparent_70%)]
+    "
+    />
+
+      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16  relative z-10">
         <div
           id="left"
           className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-24  md:w-1/2 mb-16 "
@@ -27,15 +38,30 @@ export default function Home() {
           </p>
           <div className="flex gap-4 mb-8">
             <Button
-              variant="outline"
+              variant="default"
               size="lg"
-              className="w-fit text-primary border-primary hover:bg-primary/10"
+              className="w-fit bg-primary/80 text-white"
             >
               View resume
             </Button>
-            <div className="flex items-center gap-2">
-              <Linkedin />
-              <Github />
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://www.linkedin.com/in/aziz-ktata-927b9820b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground"
+              >
+                
+              <SiLinkedin size={20} className="" />
+              </Link>
+              <Link
+                href="https://github.com/aziz-ktata"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground"
+              >
+                <SiGithub size={20} className="" />
+              </Link>
             </div>
           </div>
          <CarouselLogos />
@@ -106,7 +132,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-fit text-primary border-primary hover:bg-primary/10 mb-4 md:mb-0 "
+                className="w-fit hover:bg-primary/10 mb-4 md:mb-0"
                 >
                 View all projects <ArrowUpRight size={16} className=" ml-2" />
               </Button>

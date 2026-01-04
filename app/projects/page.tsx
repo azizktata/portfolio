@@ -17,9 +17,9 @@ export default function Projects() {
       <main className="flex min-h-screen w-full max-w-5xl flex-col items-start px-8 py-16  ">
         <div className="flex flex-col gap-2 mb-12">
           <div className="flex items-center gap-2">
-            <Link href="/" className="flex items-center gap-2 text-foreground hover:text-primary">
+            <Link href="/" className="flex items-center gap-2 text-primary group">
 
-            <ChevronLeft size={16} />
+            <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-translate duration-200" />
             <p>Aziz Ktata</p>
             </Link>
           </div>
