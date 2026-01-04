@@ -118,7 +118,7 @@ export default function CarouselLogos() {
     );
   } else {
     return (
-      <div className="relative overflow-hidden  flex gap-16  max-w-md max-h-64">
+      <div className="relative overflow-hidden  flex gap-16  max-w-md max-h-64 px-2">
         {/* Basic horizontal loop */}
         <LogoLoop
           logos={frontTechLogos}

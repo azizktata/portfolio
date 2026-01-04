@@ -50,7 +50,7 @@ export default function Home() {
           </p>
           <div id="experiance" className="mb-12">
             <h2 className="uppercase font-bold text-md mb-6">Experiance</h2>
-            <div className="flex flex-col gap-6 items-stretch">
+            <div className="flex flex-col gap-6 items-stretch group/list">
               <CardExperiance
                 timeline="2026 - Present"
                 position="Full Stack Developer"
@@ -73,6 +73,7 @@ export default function Home() {
           </div>
           <div id="projects" className="">
             <h2 className="text-md font-bold mb-6 uppercase">Projects</h2>
+            <div className="group/list">
 
             <CardProject
               title="Built property rental management system"
@@ -80,7 +81,7 @@ export default function Home() {
               imageSrc={thelandlord}
               link="https://new-manager.thelandlord.tn/dashboard"
               techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}
-            />
+              />
             <CardProject
               title="Built timesheet accounting system"
               description="timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
@@ -99,13 +100,14 @@ export default function Home() {
                 "PostgreSQL",
               ]}
             />
+            </div>
 
             <Link href="/projects">
               <Button
                 variant="outline"
                 size="lg"
                 className="w-fit text-primary border-primary hover:bg-primary/10 mb-4 md:mb-0 "
-              >
+                >
                 View all projects <ArrowUpRight size={16} className=" ml-2" />
               </Button>
             </Link>

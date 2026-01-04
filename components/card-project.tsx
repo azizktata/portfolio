@@ -18,7 +18,7 @@ export default function CardProject({
 }) {
   return (
     <div id="project" className="flex flex-col mb-12">
-      <div className="flex flex-col items-start sm:flex-row sm:gap-6">
+      <div className="flex flex-col items-start sm:flex-row sm:gap-6 group/card hover:bg-gray-50 dark:hover:bg-white/10 hover:backdrop-blur-lg hover:drop-shadow-sm p-3 rounded-md transition-all duration-200 group-hover/list:opacity-60 hover:opacity-100">
         <div className="flex flex-col sm:order-2">
           <div className="flex items-center gap-1 group group-hover:text-primary/80 cursor-pointer mb-2 ">
             <a href={link} target="_blank" rel="noopener noreferrer">

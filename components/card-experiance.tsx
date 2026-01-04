@@ -13,10 +13,11 @@ export default function CardExperiance({
   techStack: string[];
 }) {
   return (
-    <div className="group">
+    <div className="">
       <div
         id="experiance-card"
-        className="flex flex-col sm:flex-row sm:gap-6  group-hover:bg-gray-100 p-3 rounded-md transition-colors"
+        className="
+        flex flex-col sm:flex-row sm:gap-6 group/card hover:bg-gray-50 hover:backdrop-blur-lg hover:drop-shadow-sm dark:hover:bg-white/10  p-3 rounded-md transition-all duration-200 group-hover/list:opacity-60 hover:opacity-100"
       >
         <h3 className="text-foreground/80 font-light text-sm whitespace-nowrap w-24 mt-1 ">
           {timeline}
