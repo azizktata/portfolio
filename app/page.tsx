@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
+import ramtec from "../public/ramtec-1.png";
+import timesheet from "../public/timesheet-1.png";
 import CardProject from "@/components/card-project";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -34,16 +36,24 @@ export default function Home() {
             I design, build, and ship scalable web platforms.
           </p>
           <div className="flex gap-4 mb-12">
+            <Link
+              href="/AzizKtata__Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              // className="w-fit bg-primary/80 text-white"
+            >
             <Button
               variant="default"
               size="lg"
               className="w-fit bg-primary/80 text-white"
+              
             >
               View resume
             </Button>
+            </Link>
             <div className="flex items-center gap-4">
               <Link
-                href="https://www.linkedin.com/in/aziz-ktata-927b9820b/"
+                href="https://www.linkedin.com/in/aziz-ktata-4ab8a01b8/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm underline underline-offset-4 text-primary/80 hover:text-foreground"
@@ -85,28 +95,29 @@ export default function Home() {
                 timeline="2025 - Present"
                 position="Full Stack Developer @ Asis.tn"
                 description={[
-                  "Developed responsive, SEO-friendly marketing sites with Next.js, TailwindCSS, and headless WordPress.",
+                  "Developed responsive, SEO-friendly website with Next.js, TailwindCSS, and WordPress as a headless CMS.",
                   "Migrating legacy laravel systems, delivering full UI/UX redesigns and implementing multi-tenant architectures",
-                  "Optimized performance and integrations: reduced SQL queries, implemented caching, integrated third-party APIs",
+                  "Improved applications performance by optimizing database queries, implementing caching strategies, and code-splitting.",
+                  "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
                 ]}
-                techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "MySQL"]}
+                techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "MySQL", 'WordPress', "Prisma", "Netlify", "OVH", "Docker", "GitHub"]}
               />
               <CardExperiance
-                timeline="2024"
+                timeline="2024 / 6 months"
                 position="Full stack developer intern @ Sofrecom"
                 description={[
-                  "Collaborated in an Agile team to develop a web application for managing telecom resources using Springboot and Angular.",
-                  "Implemented RESTful APIs, designed database schemas, and created user-friendly UI components.",
-                  "Participated in code reviews, testing, and deployment processes to ensure high-quality deliverables.",
+                  "Collaborated in an Agile team to develop a web application for managing complaints data using Springboot and Angular.",
+                  "Fine-tuned & integrated LLM for complaints categorization and response generation for improved customer support.",
+                  "Implemented CI/CD pipelines using GitLab and Ansible to automate testing and deployment processes.",
                 ]}
-                techStack={["Springboot", "Angular", "TypeScript", "PostgreSQL"]}
+                techStack={["Springboot", "Angular", "TypeScript", "PostgreSQL", 'GitLab', "Ansible"]}
               />
               <CardExperiance
-                timeline="2022"
+                timeline="2022 / 1 month"
                 position="DevOps intern @ Tunisie Telecom"
                 description={[
                   "Deployed backend service using Docker and Kubernetes on Google Cloud Platform.",
-                  "Used Prometheus and Grafana for monitoring cloud infrastructure and applications.",
+                  "Configured Prometheus and Grafana for monitoring cloud infrastructure and applications.",
                 ]}
                 techStack={["Docker", "Kubernetes", "GCP", "Prometheus", "Grafana", "Linux"]}
               />
@@ -125,19 +136,21 @@ export default function Home() {
               <CardProject
                 title="Built timesheet accounting system"
                 description="timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
-                imageSrc={thelandlord}
-                techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}
+                imageSrc={timesheet}
+                techStack={["Laravel", "React", "Tailwind CSS", "MySQL", "Docker"]}
               />
               <CardProject
                 title="Built e-commerce platform"
                 description="A modern e-commerce solution with a user-friendly storefront, admin dashboard, and general features like product management and shopping cart"
-                imageSrc={thelandlord}
+                imageSrc={ramtec}
                 techStack={[
                   "Next.js",
                   "TypeScript",
                   "Tailwind CSS",
                   "Prisma",
                   "PostgreSQL",
+                  "NextAuth",
+                  "Redux",
                 ]}
               />
             </div>

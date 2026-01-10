@@ -41,13 +41,13 @@ export default function CardProject({
             ))}
           </div>
         </div>
-        <div className=""> 
+        <div className="min-w-fit "> 
 
         <Image
           src={imageSrc}
           alt={title}
         
-          className="rounded-md object-cover mb-4 sm:order-1 w-56 h-24"
+          className="rounded-md object-cover object-left mb-4 sm:order-1 w-48 h-24"
           />
           </div>
 

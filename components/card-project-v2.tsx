@@ -7,7 +7,7 @@ import {
   Linkedin,
   SquareArrowOutUpRight,
 } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import thelandlord from "../public/thelandlord.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,16 @@ import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { SiGithub } from "react-icons/si";
 
-export default function CardProjectV2({ inverted = false }: { inverted?: boolean }) {
+export default function CardProjectV2({
+  inverted = false,
+  subtitle,
+  title,
+  description,
+  imageSrc,
+  techStack,
+  github,
+  liveDemo,
+}: { inverted?: boolean; subtitle: string; title: string; description: string; imageSrc: StaticImageData;  techStack: string[]; github?: string; liveDemo?: string }) {
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
   if (isSmallScreen) {
     return (
@@ -26,102 +35,96 @@ export default function CardProjectV2({ inverted = false }: { inverted?: boolean
       >
         <div className="">
           <Image
-            src={thelandlord}
+            src={imageSrc}
             alt="Project Image"
             className="rounded-lg object-cover w-full h-100 sm:h-96 "
           />
         </div>
         <div className="bg-background/80 absolute inset-0"></div>
         <div className="absolute inset-0 self-center p-4 rounded-lg  px-6 sm:px-8 py-8 ">
-          <p className="text-xs text-primary font-medium">Saas Platform</p>
+          <p className="text-xs text-primary font-medium">{subtitle}</p>
           <h3 className="text-xl font-bold mb-6 sm:mb-8">
-            Property Rental Management
+            {title}
           </h3>
           <p className="text-sm mb-6 sm:mb-8 ">
-            A comprehensive property management platform that streamlines rental
-            processes for landlords and tenants. lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nullam scelerisque aliquam odio et
-            faucibus.
+            {description}
+
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              Laravel
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              React
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              Tailwind CSS
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              MySQL
-            </Badge>
+            {techStack.map((tech) => (
+              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs">
+                {tech}
+              </Badge>
+            ))}
           </div>
           <div className="flex items-center gap-2 hidden sm:flex">
-            <Github size={16} />
-            <SquareArrowOutUpRight size={16} />
+            <Link href={github || "#"}  target="_blank"
+                rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
+              <SiGithub size={20} />
+            </Link>
+            <Link href={liveDemo || "#"}  target="_blank"
+                rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
+              <SquareArrowOutUpRight size={20} />
+            </Link>
           </div>
           <div className="sm:hidden">
+            <Link href={liveDemo || "#"}  target="_blank"
+              rel="noopener noreferrer">
             <Button
               variant="outline"
               size="sm"
               className="w-fit text-primary border-primary text-xs hover:bg-primary/10"
             >
-              View Project
+                View Project
             </Button>
+              </Link>
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div  className="flex items-center">
+      <div className="flex items-center">
         <div className={cn("flex flex-col items-start -mr-16 z-10 order-1", inverted && "flex-col items-end -ml-16 -mr-0 order-2")}>
           <div className={cn("mb-6 sm:mb-8", inverted && "text-right")}>
-            <p className="text-sm text-foreground text-primary font-medium">Saas Platform</p>
+            <p className="text-sm text-foreground text-primary font-medium">{subtitle}</p>
             <h3 className="text-xl font-bold ">
-              Property Rental Management
+              {title}
             </h3>
           </div>
 
           <div className="w-full max-w-md bg-gray-300/10 backdrop-blur-lg shadow-md dark:bg-background-secondary/50 rounded-md  mb-6 sm:mb-8 ">
             <p className="text-sm p-6">
-              A comprehensive property management platform that streamlines
-              rental processes for landlords and tenants. lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio
-              et faucibus.
+             {description}
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-4">
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              Laravel
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              React
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              Tailwind CSS
-            </Badge>
-            <Badge className="bg-primary/10 text-primary py-1 text-xs">
-              MySQL
-            </Badge>
+          <div className={cn("flex flex-wrap gap-2 mb-4", inverted && "justify-end")}>
+            {techStack.map((tech) => (
+              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs">
+                {tech}
+              </Badge>
+            ))}
           </div>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-            <SiGithub size={24} />
+            <Link href={github || "#"}  target="_blank"
+                rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
+              <SiGithub size={20} />
             </Link>
-            <Link href="#" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-            <SquareArrowOutUpRight size={24} />
+            <Link href={liveDemo || "#"}  target="_blank"
+                rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
+              <SquareArrowOutUpRight size={20} />
             </Link>
           </div>
         </div>
-        <div className={cn("max-w-md lg:max-w-lg xl:max-w-xl order-2", inverted && "order-1")}>
-            <Image
-                src={thelandlord}
-                alt="Project Image"
-                className="rounded-sm object-cover w-full h-110 sm:h-96"
-              />
+        <div className={cn("max-w-md lg:max-w-lg xl:max-w-xl order-2 overflow-hidden relative", inverted && "order-1")}>
+          <Image
+            src={imageSrc}
+            alt="Project Image"
+            className="rounded-md object-cover  w-full h-110 sm:h-96"
+          />
+            <div className={cn("absolute inset-0  bg-gradient-to-r from-primary/20 via-primary/10 rounded-md", inverted && " bg-gradient-to-l")}></div>
+
         </div>
       </div>
     );
