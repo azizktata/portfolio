@@ -96,8 +96,8 @@ export default function Home() {
                 position="Full Stack Developer @ Asis.tn"
                 description={[
                   "Developed responsive, SEO-friendly website with Next.js, TailwindCSS, and WordPress as a headless CMS.",
-                  "Migrating legacy laravel systems, delivering full UI/UX redesigns and implementing multi-tenant architectures",
-                  "Improved applications performance by optimizing database queries, implementing caching strategies, and code-splitting.",
+                  "Migrated legacy laravel systems, delivering full UI/UX redesigns, and implementing multi-tenant architectures",
+                  "Improved applications performance by optimizing database queries, implementing caching strategies and enhancing code maintainability.",
                   "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
                 ]}
                 techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "MySQL", 'WordPress', "Prisma", "Netlify", "OVH", "Docker", "GitHub"]}
@@ -130,7 +130,7 @@ export default function Home() {
                 title="Built property rental management system"
                 description="A multi-tenant SaaS platform for property rental management, featuring dashboards, CRM workflows, calendars, invoicing, messaging, and integration with external services and multi-channel publishing."
                 imageSrc={thelandlord}
-                link="https://new-manager.thelandlord.tn/dashboard"
+                // link="https://new-manager.thelandlord.tn/dashboard"
                 techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}
               />
               <CardProject

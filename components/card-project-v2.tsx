@@ -101,7 +101,7 @@ export default function CardProjectV2({
 
           <div className={cn("flex flex-wrap gap-2 mb-4", inverted && "justify-end")}>
             {techStack.map((tech) => (
-              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs">
+              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs z-10">
                 {tech}
               </Badge>
             ))}
@@ -123,7 +123,7 @@ export default function CardProjectV2({
             alt="Project Image"
             className="rounded-md object-cover  w-full h-110 sm:h-96"
           />
-            <div className={cn("absolute inset-0  bg-gradient-to-r from-primary/20 via-primary/10 rounded-md", inverted && " bg-gradient-to-l")}></div>
+            <div className={cn("absolute inset-0  bg-gradient-to-r from-white/30 dark:from-primary/20 via-primary/10 rounded-md", inverted && " bg-gradient-to-l")}></div>
 
         </div>
       </div>
