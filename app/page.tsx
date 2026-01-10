@@ -84,7 +84,7 @@ export default function Home() {
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
               I specialize in designing and building scalable web platforms from
               architecture to production. I worked with Laravel, React,
-              Next.js, and Springboot delivering solutions for SaaS, e-commerce, and
+              Next.js, Springboot & Angular, delivering solutions for SaaS, e-commerce, and
               multi-tenant applications.
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function Home() {
                   "Improved applications performance by optimizing database queries, implementing caching strategies and enhancing code maintainability.",
                   "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
                 ]}
-                techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "MySQL", 'WordPress', "Prisma", "Netlify", "OVH", "Docker", "GitHub"]}
+                techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "Figma", "MySQL", 'WordPress', "Prisma", "Netlify", "OVH", "Docker", "GitHub"]}
               />
               <CardExperiance
                 timeline="2024 / 6 months"
@@ -128,7 +128,8 @@ export default function Home() {
             <div className="group/list">
               <CardProject
                 title="Built property rental management system"
-                description="A multi-tenant SaaS platform for property rental management, featuring dashboards, CRM workflows, calendars, invoicing, messaging, and integration with external services and multi-channel publishing."
+                description="A multi-tenant SaaS platform for property rental management, includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features."
+                // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
                 imageSrc={thelandlord}
                 // link="https://new-manager.thelandlord.tn/dashboard"
                 techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}

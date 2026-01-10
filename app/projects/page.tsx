@@ -16,7 +16,7 @@ import mbio7 from "../../public/mbio7.png";
 import skyflow from "../../public/skyflow.png";
 import epigreenvision from "../../public/epigreenvision.png";
 import gafvoyages from "../../public/gafvoyages.png";
-
+import parcauto from "../../public/parcauto.png";
 export default function Projects() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
@@ -36,9 +36,11 @@ export default function Projects() {
           <CardProjectV2
             subtitle="TheLandlord"
             title="Property Management Platform"
-            description="A comprehensive property management platform that streamlines rental processes for landlords and tenants."
+            description="A scalable, multi-tenant property management platform designed for short-term rentals, recognized at the Global Proptech & Contech Awards 2026 in Dubai. 
+             The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
+             "
             imageSrc={thelandlord}
-            link="https://example.com/thelandlord"
+            // link="https://example.com/thelandlord"
             techStack={[
               "Laravel",
               "inertia.js",
@@ -47,23 +49,25 @@ export default function Projects() {
               "MySQL",
 
             ]}
-            github="https://github.com/username/thelandlord"
-            liveDemo="https://example.com/thelandlord"
+            // github="https://github.com/username/thelandlord"
+            // liveDemo="https://example.com/thelandlord"
+            objectLeft={true}
           />
           <CardProjectV2
             subtitle="Timesheet"
             title="Accounting Timesheet System"
-            description="timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
+            description="A multi-tenant ERP and Time Tracking system designed for professional firms to streamline mission management and resource allocation. The platform features an automated planning engine with collaborative timelines, and comprehensive reporting for operational profitability and team productivity."
             imageSrc={timesheet}
             techStack={["Laravel", "React", "Tailwind CSS", "MySQL", "Docker"]}
-            github="https://github.com/username/timesheet"
-            liveDemo="https://example.com/timesheet"
+            // github="https://github.com/username/timesheet"
+            // liveDemo="https://example.com/timesheet"
             inverted={true}
+            objectLeft={true}
           />
           <CardProjectV2
             subtitle="Ramtec"
             title="E-commerce Platform"
-            description="A SaaS e-commerce platform that empowers businesses to create and manage their online stores with ease, offering a seamless shopping experience for customers."
+            description="A modern e-commerce platform with a custom storefront and admin dashboard, supporting product management, cart, orders, and email automation."
             imageSrc={ramtec}
             techStack={[
               "Next.js",
@@ -73,15 +77,15 @@ export default function Projects() {
               "NextAuth",
               "Redux",
             ]}
-            github="https://github.com/username/ecommerce"
-            liveDemo="https://example.com/ecommerce"
-
+            github="https://github.com/azizktata/ramtec-ecommerce/tree/frontstore-v3"
+            liveDemo="https://ramtec-ecommerce.vercel.app/"
+            objectLeft={true}
           />
 
           <CardProjectV2
             subtitle="Marine Keys"
             title="Elite Yachting Services"
-            description="Marketing site for startup company that provides yachting services, delivery, crew, and maintenance."
+            description="Tunisian startup that provides yachting services including yacht charters, sales, and maintenance in the Mediterranean region."
             imageSrc={marinekeys}
             techStack={[
               "Next.js",
@@ -119,7 +123,7 @@ export default function Projects() {
               "I18n",
               "Shadcn UI",
             ]}
-            github="https://github.com/azizktata/mbio7"
+            // github="https://github.com/azizktata/mbio7"
             liveDemo="https://mbio7.vercel.app/en"
             inverted={true}
           />
@@ -136,7 +140,7 @@ export default function Projects() {
             ]}
             github="https://github.com/azizktata/gaf-travel-events"
             liveDemo="https://www.gafvoyages.tn/"
-          
+
 
           />
           <CardProjectV2
@@ -152,7 +156,7 @@ export default function Projects() {
             ]}
             github="https://github.com/azizktata/sky-flow"
             liveDemo="https://www.skyflows.com.tn/"
-              inverted={true}
+            inverted={true}
           />
           <CardProjectV2
             subtitle="EpiGreenVision"
@@ -168,6 +172,22 @@ export default function Projects() {
             github="https://github.com/azizktata/epi-green-vision"
             liveDemo="https://www.epigreenvision.com/"
 
+          />
+          <CardProjectV2
+            subtitle="Side Project"
+            title="Car Rental Service"
+            description="A car rental service platform allowing users to browse, book, and manage vehicle rentals with ease, optimizing vehicle fleet management for the service provider."
+            imageSrc={parcauto}
+            techStack={[
+              "Springboot",
+              "Angular",
+              "Tailwind CSS",
+              "MySQL",
+            ]}
+            github="https://github.com/azizktata/Car-Rental-Management/tree/main"
+            // liveDemo="https://www.epigreenvision.com/"
+            inverted={true}
+            objectLeft={true}
           />
         </div>
       </main>

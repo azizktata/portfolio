@@ -1,14 +1,9 @@
 'use client';
 
-import React from "react";
 import {
-  ChevronLeft,
-  Github,
-  Linkedin,
   SquareArrowOutUpRight,
 } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
-import thelandlord from "../public/thelandlord.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -25,7 +20,8 @@ export default function CardProjectV2({
   techStack,
   github,
   liveDemo,
-}: { inverted?: boolean; subtitle: string; title: string; description: string; imageSrc: StaticImageData;  techStack: string[]; github?: string; liveDemo?: string }) {
+  objectLeft,
+}: { inverted?: boolean; subtitle: string; title: string; description: string; imageSrc: StaticImageData; techStack: string[]; github?: string; liveDemo?: string; objectLeft?: boolean }) {
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
   if (isSmallScreen) {
     return (
@@ -58,26 +54,34 @@ export default function CardProjectV2({
             ))}
           </div>
           <div className="flex items-center gap-2 hidden sm:flex">
-            <Link href={github || "#"}  target="_blank"
+            {
+              github &&
+              <Link href={github || "#"} target="_blank"
                 rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-              <SiGithub size={20} />
-            </Link>
-            <Link href={liveDemo || "#"}  target="_blank"
+                <SiGithub size={20} />
+              </Link>
+            }
+            {
+              liveDemo &&
+              <Link href={liveDemo || "#"} target="_blank"
                 rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-              <SquareArrowOutUpRight size={20} />
-            </Link>
+                <SquareArrowOutUpRight size={20} />
+              </Link>
+            }
           </div>
           <div className="sm:hidden">
-            <Link href={liveDemo || "#"}  target="_blank"
-              rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-fit text-primary border-primary text-xs hover:bg-primary/10"
-            >
-                View Project
-            </Button>
+            {liveDemo &&
+              <Link href={liveDemo || "#"} target="_blank"
+                rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-fit text-primary border-primary text-xs hover:bg-primary/10"
+                >
+                  View Project
+                </Button>
               </Link>
+            }
           </div>
         </div>
       </div>
@@ -94,8 +98,8 @@ export default function CardProjectV2({
           </div>
 
           <div className="w-full max-w-md bg-gray-300/10 backdrop-blur-lg shadow-md dark:bg-background-secondary/50 rounded-md  mb-6 sm:mb-8 ">
-            <p className="text-sm p-6">
-             {description}
+            <p className="text-sm p-6 leading-relaxed">
+              {description}
             </p>
           </div>
 
@@ -107,23 +111,29 @@ export default function CardProjectV2({
             ))}
           </div>
           <div className="flex items-center gap-4">
-            <Link href={github || "#"}  target="_blank"
+            {
+              github &&
+              <Link href={github || "#"} target="_blank"
                 rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-              <SiGithub size={20} />
-            </Link>
-            <Link href={liveDemo || "#"}  target="_blank"
+                <SiGithub size={20} />
+              </Link>
+            }
+            {
+              liveDemo &&
+              <Link href={liveDemo || "#"} target="_blank"
                 rel="noopener noreferrer" className="text-sm underline underline-offset-4 text-foreground/70 hover:text-foreground">
-              <SquareArrowOutUpRight size={20} />
-            </Link>
+                <SquareArrowOutUpRight size={20} />
+              </Link>
+            }
           </div>
         </div>
         <div className={cn("max-w-md lg:max-w-lg xl:max-w-xl order-2 overflow-hidden relative", inverted && "order-1")}>
           <Image
             src={imageSrc}
             alt="Project Image"
-            className="rounded-md object-cover  w-full h-110 sm:h-96"
+            className={cn("rounded-md object-cover w-full h-110 sm:h-96", objectLeft && "object-left")}
           />
-            <div className={cn("absolute inset-0  bg-gradient-to-r from-white/30 dark:from-primary/20 via-primary/10 rounded-md", inverted && " bg-gradient-to-l")}></div>
+          <div className={cn("absolute inset-0  bg-gradient-to-r from-white/30 dark:from-primary/20 via-primary/10 rounded-md", inverted && " bg-gradient-to-l")}></div>
 
         </div>
       </div>
