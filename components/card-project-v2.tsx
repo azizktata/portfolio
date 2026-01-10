@@ -10,6 +10,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 import { SiGithub } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 export default function CardProjectV2({
   inverted = false,
@@ -22,6 +23,7 @@ export default function CardProjectV2({
   liveDemo,
   objectLeft,
 }: { inverted?: boolean; subtitle: string; title: string; description: string; imageSrc: StaticImageData; techStack: string[]; github?: string; liveDemo?: string; objectLeft?: boolean }) {
+
   const isSmallScreen = useMediaQuery("(max-width: 640px)");
   if (isSmallScreen) {
     return (

@@ -17,10 +17,14 @@ import {
   SiAmazon,
   SiGooglecloud,
 } from "react-icons/si";
-import LogoLoop from "@/components/LogoLoop";
+// import LogoLoop from "@/components/LogoLoop";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import LogoLoopRaw from "@/components/LogoLoop";
+import { useEffect, useState } from "react";
 
 export default function CarouselLogos() {
+  const LogoLoop = LogoLoopRaw as any;
+
   const frontTechLogos = [
     { node: <SiReact />, title: "React", href: "https://react.dev" },
     { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
@@ -81,7 +85,7 @@ export default function CarouselLogos() {
           logos={frontTechLogos}
           speed={30}
           direction="right"
-          logoHeight={36}
+          logoHeight={24}
           gap={40}
           hoverSpeed={0}
           scaleOnHover
@@ -93,7 +97,7 @@ export default function CarouselLogos() {
           logos={backTechLogos}
           speed={30}
           direction="left"
-          logoHeight={36}
+          logoHeight={24}
           gap={40}
           hoverSpeed={0}
           scaleOnHover
@@ -105,7 +109,7 @@ export default function CarouselLogos() {
           logos={devopsTechLogos}
           speed={40}
           direction="right"
-          logoHeight={36}
+          logoHeight={24}
           gap={40}
           hoverSpeed={0}
           scaleOnHover

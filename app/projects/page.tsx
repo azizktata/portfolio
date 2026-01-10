@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
+'use client';
+
 import {
   ChevronLeft,
-  Github,
-  Linkedin,
-  SquareArrowOutUpRight,
 } from "lucide-react";
 import Link from "next/link";
 import CardProjectV2 from "@/components/card-project-v2";

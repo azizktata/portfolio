@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
@@ -5,7 +7,6 @@ import ramtec from "../public/ramtec-1.png";
 import timesheet from "../public/timesheet-1.png";
 import CardProject from "@/components/card-project";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import CardExperiance from "@/components/card-experiance";
 import CarouselLogos from "@/components/carousel-logos";
 import { SiGithub, SiLinkedin } from "react-icons/si";
