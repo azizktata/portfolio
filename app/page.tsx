@@ -1,5 +1,3 @@
-'use client';
-
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
@@ -8,8 +6,9 @@ import timesheet from "../public/timesheet-1.png";
 import CardProject from "@/components/card-project";
 import Link from "next/link";
 import CardExperiance from "@/components/card-experiance";
-import CarouselLogos from "@/components/carousel-logos";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import CarouselLogosClient from "@/components/carousel-logos-wrapper";
+
 
 export default function Home() {
   return (
@@ -71,7 +70,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <CarouselLogos />
+          <CarouselLogosClient />
         </div>
         <div id="right" className="flex flex-col md:py-24 ">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>

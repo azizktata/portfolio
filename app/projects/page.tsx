@@ -1,5 +1,3 @@
-'use client';
-
 import {
   ChevronLeft,
 } from "lucide-react";
@@ -15,6 +13,7 @@ import skyflow from "../../public/skyflow.png";
 import epigreenvision from "../../public/epigreenvision.png";
 import gafvoyages from "../../public/gafvoyages.png";
 import parcauto from "../../public/parcauto.png";
+import CardProjectV2Client from "@/components/card-project-v2-wrapper";
 export default function Projects() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
@@ -31,7 +30,7 @@ export default function Projects() {
           <h2 className="text-4xl font-bold">All Projects</h2>
         </div>
         <div className="flex flex-col gap-12  mx-auto">
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="TheLandlord"
             title="Property Management Platform"
             description="A scalable, multi-tenant property management platform designed for short-term rentals, recognized at the Global Proptech & Contech Awards 2026 in Dubai. 
@@ -51,7 +50,7 @@ export default function Projects() {
             // liveDemo="https://example.com/thelandlord"
             objectLeft={true}
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="Timesheet"
             title="Accounting Timesheet System"
             description="A multi-tenant ERP and Time Tracking system designed for professional firms to streamline mission management and resource allocation. The platform features an automated planning engine with collaborative timelines, and comprehensive reporting for operational profitability and team productivity."
@@ -62,7 +61,7 @@ export default function Projects() {
             inverted={true}
             objectLeft={true}
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="Ramtec"
             title="E-commerce Platform"
             description="A modern e-commerce platform with a custom storefront and admin dashboard, supporting product management, cart, orders, and email automation."
@@ -80,7 +79,7 @@ export default function Projects() {
             objectLeft={true}
           />
 
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="Marine Keys"
             title="Elite Yachting Services"
             description="Tunisian startup that provides yachting services including yacht charters, sales, and maintenance in the Mediterranean region."
@@ -96,7 +95,7 @@ export default function Projects() {
             liveDemo="https://www.marinekeys.com/fr"
             inverted={true}
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="Dolphin Equipements"
             title="Industrial Equipment Distribution"
             description="Tunisian company specialized in the distribution of hydraulic, pneumatic, and industrial maintenance equipment."
@@ -110,7 +109,7 @@ export default function Projects() {
             github="https://github.com/azizktata/dolphine-equipements/tree/main"
             liveDemo="https://www.dolphinequipements.tn/"
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="mBio7"
             title="Wood Panel Construction Material"
             description="Molded wood panel that enables easy and rapid construction of sustainable buildings patented product developed by WoodWise company."
@@ -125,7 +124,7 @@ export default function Projects() {
             liveDemo="https://mbio7.vercel.app/en"
             inverted={true}
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="GafVoyages.tn"
             title="Travel Agency Site"
             description="A travel agency website based in Tunisia offering a variety of travel packages and services to customers."
@@ -141,7 +140,7 @@ export default function Projects() {
 
 
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="SkyFlow"
             title="Import Export Enterprise"
             description="Import export company for various products with global suppliers and customers."
@@ -156,7 +155,7 @@ export default function Projects() {
             liveDemo="https://www.skyflows.com.tn/"
             inverted={true}
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="EpiGreenVision"
             title="Science-based R&D enterprise"
             description="Science-based applied physics and R&D company specializing in innovative solutions for energy efficiency and environmental sustainability."
@@ -171,7 +170,7 @@ export default function Projects() {
             liveDemo="https://www.epigreenvision.com/"
 
           />
-          <CardProjectV2
+          <CardProjectV2Client
             subtitle="Side Project"
             title="Car Rental Service"
             description="A car rental service platform allowing users to browse, book, and manage vehicle rentals with ease, optimizing vehicle fleet management for the service provider."
