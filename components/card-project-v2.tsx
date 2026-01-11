@@ -31,11 +31,11 @@ export default function CardProjectV2({
         id="project-card-v2"
         className="relative shadow-md rounded-md overflow-hidden"
       >
-        <div className="max-w-md lg:max-w-lg xl:max-w-xl overflow-hidden relative">
+        <div className="h-110 max-h-110 overflow-hidden relative">
           <Image
             src={imageSrc}
             alt="Project Image"
-            className="rounded-lg object-cover w-full h-100 sm:h-96 "
+            className="rounded-lg object-cover w-full h-full  "
           />
         </div>
         <div className="bg-background/80 absolute inset-0"></div>

@@ -36,7 +36,7 @@ export default function Home() {
           <p className="text-sm md:text-md max-w-lg text-foreground mb-8">
             I design, build, and ship scalable web platforms.
           </p>
-          <div className="flex gap-4 mb-12">
+          <div className="flex gap-4 mb-6 md:mb-12">
             <Link
               href="/AzizKtata__Resume.pdf"
               target="_blank"
