@@ -28,7 +28,7 @@ export default function Projects() {
           </div>
           <h2 className="text-4xl font-bold">All Projects</h2>
         </div>
-        <div className="flex flex-col gap-12  mx-auto">
+        <div className="flex flex-col gap-12  mx-auto w-full">
           <CardProjectV2
             subtitle="TheLandlord"
             title="Property Management Platform"
@@ -131,7 +131,7 @@ export default function Projects() {
             techStack={[
               "Next.js",
               "Tailwind CSS",
-              "Sanity headless CMS",
+              "Sanity CMS",
               "Shadcn UI",
             ]}
             github="https://github.com/azizktata/gaf-travel-events"

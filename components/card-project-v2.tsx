@@ -18,30 +18,34 @@ export default function CardProjectV2({
   github,
   liveDemo,
   objectLeft,
-}: { 
-  inverted?: boolean; 
-  subtitle: string; 
-  title: string; 
-  description: string; 
-  imageSrc: StaticImageData; 
-  techStack: string[]; 
-  github?: string; 
-  liveDemo?: string; 
-  objectLeft?: boolean 
+}: {
+  inverted?: boolean;
+  subtitle: string;
+  title: string;
+  description: string;
+  imageSrc: StaticImageData;
+  techStack: string[];
+  github?: string;
+  liveDemo?: string;
+  objectLeft?: boolean
 }) {
   return (
     <>
       {/* MOBILE VIEW: Visible only on screens smaller than 640px (sm) */}
       <div
         id="project-card-v2-mobile"
-        className="flex md:hidden relative shadow-md rounded-md overflow-hidden"
+        className="flex sm:hidden relative shadow-md rounded-md overflow-hidden w-full"
       >
-        <div className="min-w-fit w-80 h-110 overflow-hidden relative">
+        <div className={cn(
+          "relative w-full aspect-[4/5] min-w-76 h-110 overflow-hidden", // Use aspect ratio instead of fixed h-110
+          "flex-1"
+        )}>
           <Image
             src={imageSrc}
             alt="Project Image"
             fill
-            className={cn("rounded-lg object-cover ", objectLeft && "object-left h-110")}
+            className={cn("rounded-lg object-cover ", objectLeft && "object-left ")}
+            sizes="(max-width: 640px) 100vw"
           />
         </div>
         <div className="bg-background/80 absolute inset-0" />
@@ -75,7 +79,7 @@ export default function CardProjectV2({
       {/* DESKTOP VIEW: Visible only from 640px (sm) and up */}
       <div id="project-card-v2-desktop" className="hidden sm:flex items-center">
         <div className={cn(
-          "flex flex-col items-start -mr-16 z-10 order-1", 
+          "flex flex-col items-start -mr-16 z-10 order-1",
           inverted && "flex-col items-end -ml-16 -mr-0 order-2"
         )}>
           <div className={cn("mb-6 sm:mb-8", inverted && "text-right")}>
@@ -115,7 +119,7 @@ export default function CardProjectV2({
             className={cn("rounded-md object-cover w-full h-96", objectLeft && "object-left")}
           />
           <div className={cn(
-            "absolute inset-0 bg-gradient-to-r from-white/30 dark:from-primary/20 via-primary/10 rounded-md", 
+            "absolute inset-0 bg-gradient-to-r from-white/30 dark:from-primary/20 via-primary/10 rounded-md",
             inverted && "bg-gradient-to-l"
           )} />
         </div>
