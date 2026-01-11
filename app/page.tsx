@@ -107,7 +107,7 @@ export default function Home() {
                 timeline="2024 / 6 months"
                 position="Full stack developer intern @ Sofrecom"
                 description={[
-                  "Collaborated in an Agile team to develop a web application for managing complaints data using Springboot and Angular.",
+                  "Collaborated in an Agile team to develop a single-page application for managing complaints using Spring Boot, JWT-based RBAC, and Angular.",
                   "Fine-tuned & integrated LLM for complaints categorization and response generation for improved customer support.",
                   "Implemented CI/CD pipelines using GitLab and Ansible to automate testing and deployment processes.",
                 ]}
@@ -118,7 +118,7 @@ export default function Home() {
                 position="DevOps intern @ Tunisie Telecom"
                 description={[
                   "Deployed backend service using Docker and Kubernetes on Google Cloud Platform.",
-                  "Configured Prometheus and Grafana for monitoring cloud infrastructure and applications.",
+                  "Configured Prometheus and Grafana to monitor cloud infrastructure and applications, providing real-time alerts.",
                 ]}
                 techStack={["Docker", "Kubernetes", "GCP", "Prometheus", "Grafana", "Linux"]}
               />
