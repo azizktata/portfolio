@@ -34,39 +34,45 @@ export default function CardProjectV2({
       {/* MOBILE VIEW: Visible only on screens smaller than 640px (sm) */}
       <div
         id="project-card-v2-mobile"
-        className="flex sm:hidden relative shadow-md rounded-md overflow-hidden w-full"
+        className="flex sm:hidden relative w-full shadow-md rounded-md overflow-hidden"
       >
-        <div className={cn(
-          "relative w-full aspect-[4/5] min-w-76 h-110 overflow-hidden", // Use aspect ratio instead of fixed h-110
-          "flex-1"
-        )}>
+        {/* 1. THE BACKGROUND IMAGE - Now fills the container without defining height */}
+        <div className="absolute inset-0 z-0">
           <Image
             src={imageSrc}
             alt="Project Image"
             fill
-            className={cn("rounded-lg object-cover ", objectLeft && "object-left ")}
+            className={cn("object-cover", objectLeft && "object-left")}
             sizes="(max-width: 640px) 100vw"
           />
+          {/* Dark Overlay inside the same absolute container */}
+          <div className="absolute inset-0 bg-background/80" />
         </div>
-        <div className="bg-background/80 absolute inset-0" />
-        <div className="absolute inset-0 self-center p-4 rounded-lg px-6 py-8">
+
+        {/* 2. THE CONTENT - This is now RELATIVE, so it pushes the container's height */}
+        <div className="relative z-10 w-full p-6 py-8 flex flex-col">
           <p className="text-xs text-primary font-medium">{subtitle}</p>
-          <h3 className="text-xl font-bold mb-6">{title}</h3>
-          <p className="text-sm mb-6">{description}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
+          <h3 className="text-xl font-bold mb-4">{title}</h3>
+
+          <p className="text-sm mb-6 leading-relaxed">
+            {description}
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
             {techStack.map((tech) => (
               <Badge key={tech} className="bg-primary-foreground text-primary py-1 text-xs">
                 {tech}
               </Badge>
             ))}
           </div>
+
           <div className="flex">
             {liveDemo && (
               <Link href={liveDemo} target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-fit text-foreground border-primary text-xs hover:bg-primary-foreground"
+                  className="w-fit text-foreground border-primary text-xs"
                 >
                   View Project
                 </Button>
