@@ -33,10 +33,10 @@ export default function Home() {
             Aziz Ktata
           </h1>
           <h3 className="text-lg font-medium mb-6 md:mb-8">Full stack developer</h3>
-          <p className="text-sm md:text-md max-w-lg text-foreground mb-6 md:mb-8">
+          <p className="text-sm md:text-md max-w-lg text-foreground mb-8">
             I design, build, and ship scalable web platforms.
           </p>
-          <div className="flex gap-4 mb-6 md:mb-12">
+          <div className="flex gap-4 mb-4 md:mb-12">
             <Link
               href="/AzizKtata__Resume.pdf"
               target="_blank"
