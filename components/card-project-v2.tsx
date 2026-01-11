@@ -31,7 +31,7 @@ export default function CardProjectV2({
         id="project-card-v2"
         className="relative shadow-md rounded-md overflow-hidden"
       >
-        <div className="h-110 max-h-110 overflow-hidden relative">
+        <div className="min-w-fit overflow-hidden relative">
           <Image
             src={imageSrc}
             alt="Project Image"
@@ -78,7 +78,7 @@ export default function CardProjectV2({
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-fit text-primary border-primary text-xs hover:bg-primary-foreground"
+                  className="w-fit text-foreground border-primary text-xs hover:bg-primary-foreground"
                 >
                   View Project
                 </Button>
