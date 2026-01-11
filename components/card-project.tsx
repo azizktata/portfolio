@@ -35,7 +35,7 @@ export default function CardProject({
 
           <div className="flex items-center gap-2 flex-wrap hidden sm:flex">
             {techStack.map((tech) => (
-              <Badge key={tech}  className="bg-primary/10 text-primary py-1 text-xs">
+              <Badge key={tech}  className="bg-primary-foreground text-primary py-1 text-xs">
                 {tech}
               </Badge>
             ))}
@@ -53,7 +53,7 @@ export default function CardProject({
 
          <div className="flex items-center gap-2 flex-wrap sm:hidden">
             {techStack.map((tech) => (
-              <Badge key={tech}  className="bg-primary/10 text-primary py-1 text-xs">
+              <Badge key={tech}  className="bg-primary-foreground text-primary py-1 text-xs">
                 {tech}
               </Badge>
             ))}

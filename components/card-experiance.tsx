@@ -43,7 +43,7 @@ export default function CardExperiance({
             {techStack.map((tech) => (
               <Badge
                 key={tech}
-                className="bg-primary/10 text-primary py-1 text-xs"
+                className="bg-primary-foreground text-primary py-1 text-xs"
               >
                 {tech}
               </Badge>

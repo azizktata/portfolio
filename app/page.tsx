@@ -8,6 +8,7 @@ import Link from "next/link";
 import CardExperiance from "@/components/card-experiance";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import CarouselLogosClient from "@/components/carousel-logos-wrapper";
+import CarouselLogos from "@/components/carousel-logos";
 
 
 export default function Home() {
@@ -70,7 +71,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <CarouselLogosClient />
+          <CarouselLogos/>
         </div>
         <div id="right" className="flex flex-col md:py-24 ">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>

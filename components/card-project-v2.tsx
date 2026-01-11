@@ -31,7 +31,7 @@ export default function CardProjectV2({
         id="project-card-v2"
         className="relative shadow-md rounded-md overflow-hidden"
       >
-        <div className="">
+        <div className="max-w-md lg:max-w-lg xl:max-w-xl overflow-hidden relative">
           <Image
             src={imageSrc}
             alt="Project Image"
@@ -50,7 +50,7 @@ export default function CardProjectV2({
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
             {techStack.map((tech) => (
-              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs">
+              <Badge key={tech} className="bg-primary-foreground text-primary py-1 text-xs">
                 {tech}
               </Badge>
             ))}
@@ -78,7 +78,7 @@ export default function CardProjectV2({
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-fit text-primary border-primary text-xs hover:bg-primary/10"
+                  className="w-fit text-primary border-primary text-xs hover:bg-primary-foreground"
                 >
                   View Project
                 </Button>
@@ -99,7 +99,7 @@ export default function CardProjectV2({
             </h3>
           </div>
 
-          <div className="w-full max-w-md bg-gray-300/10 backdrop-blur-lg shadow-md dark:bg-background-secondary/50 rounded-md  mb-6 sm:mb-8 ">
+          <div className="w-full md:max-w-lg lg:max-w-md bg-gray-300/10 backdrop-blur-lg shadow-md dark:bg-background-secondary/50 rounded-md  mb-6 sm:mb-8 ">
             <p className="text-sm p-6 leading-relaxed">
               {description}
             </p>
@@ -107,7 +107,7 @@ export default function CardProjectV2({
 
           <div className={cn("flex flex-wrap gap-2 mb-4", inverted && "justify-end")}>
             {techStack.map((tech) => (
-              <Badge key={tech} className="bg-primary/10 text-primary py-1 text-xs z-10">
+              <Badge key={tech} className="bg-primary-foreground text-primary py-1 text-xs z-10">
                 {tech}
               </Badge>
             ))}

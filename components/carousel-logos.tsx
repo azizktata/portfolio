@@ -1,5 +1,3 @@
-'use client';
-
 import {
   SiReact,
   SiNextdotjs,
@@ -17,10 +15,8 @@ import {
   SiAmazon,
   SiGooglecloud,
 } from "react-icons/si";
-// import LogoLoop from "@/components/LogoLoop";
-import { useMediaQuery } from "@uidotdev/usehooks";
+
 import LogoLoopRaw from "@/components/LogoLoop";
-import { useEffect, useState } from "react";
 
 export default function CarouselLogos() {
   const LogoLoop = LogoLoopRaw as any;
@@ -74,54 +70,9 @@ export default function CarouselLogos() {
     { node: <SiAmazon />, title: "AWS", href: "https://aws.amazon.com" },
     { node: <SiGooglecloud />, title: "GCP", href: "https://cloud.google.com" },
   ];
-
-  const isSmallScreen = useMediaQuery("(max-width: 640px)");
-
-  if (isSmallScreen) {
+  
     return (
-      <div className="relative overflow-hidden  flex flex-col gap-6 max-w-md max-h-64">
-        {/* Basic horizontal loop */}
-        <LogoLoop
-          logos={frontTechLogos}
-          speed={30}
-          direction="right"
-          logoHeight={24}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
-        <LogoLoop
-          logos={backTechLogos}
-          speed={30}
-          direction="left"
-          logoHeight={24}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
-        <LogoLoop
-          logos={devopsTechLogos}
-          speed={40}
-          direction="right"
-          logoHeight={24}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
-      </div>
-    );
-  } else {
-    return (
-      <div className="relative overflow-hidden  flex gap-16  max-w-md max-h-64 px-2">
+      <div className="hidden md:flex relative overflow-hidden  flex gap-16  max-w-md max-h-64 px-2">
         {/* Basic horizontal loop */}
         <LogoLoop
           logos={frontTechLogos}
@@ -161,5 +112,5 @@ export default function CarouselLogos() {
         />
       </div>
     );
-  }
+  
 }
