@@ -35,7 +35,7 @@ export default function CardProjectV2({
           <Image
             src={imageSrc}
             alt="Project Image"
-            className="rounded-lg object-cover w-full h-full  "
+            className={cn("rounded-lg object-cover w-96 h-100", objectLeft && "object-left h-110")}
           />
         </div>
         <div className="bg-background/80 absolute inset-0"></div>
