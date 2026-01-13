@@ -24,7 +24,7 @@ export default function Home() {
     "
       />
 
-      <main className="flex min-h-screen w-full max-w-6xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16  relative z-10">
+      <main className="flex min-h-screen w-full max-w-6xl xl:max-w-7xl flex-col justify-between px-8 md:px-6 items-start md:flex-row md:gap-16  relative z-10">
         <div
           id="left"
           className="flex flex-col pt-16 lg:mb-0 lg:sticky lg:top-0 md:py-24  md:w-1/2 mb-16 "
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <CarouselLogos/>
         </div>
-        <div id="right" className="flex flex-col md:py-24 ">
+        <div id="right" className="flex flex-col md:py-24 max-w-2xl">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
           <div className="mb-12 flex flex-col gap-4">
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
@@ -89,14 +89,14 @@ export default function Home() {
               multi-tenant applications.
             </p>
           </div>
-          <div id="experiance" className="mb-12">
+          <div id="experiance" className="mb-12 ">
             <h2 className="uppercase font-bold text-md mb-6">Experiance</h2>
             <div className="flex flex-col gap-6 items-stretch group/list">
               <CardExperiance
                 timeline="2025 - Present"
                 position="Full Stack Developer @ Asis.tn"
                 description={[
-                  "Developed responsive, SEO-friendly website with Next.js, TailwindCSS, and WordPress as a headless CMS.",
+                  "Developed multiple responsive, SEO-friendly websites with Next.js, TailwindCSS, and WordPress as a headless CMS.",
                   "Migrated legacy laravel systems, delivering full UI/UX redesigns, and implementing multi-tenant architectures",
                   "Improved applications performance by optimizing database queries, implementing caching strategies and enhancing code maintainability.",
                   "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
