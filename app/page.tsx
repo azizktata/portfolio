@@ -62,7 +62,7 @@ export default function Home() {
                 <SiLinkedin size={20} className="" />
               </Link>
               <Link
-                href="https://github.com/aziz-ktata"
+                href="https://github.com/azizktata"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm underline underline-offset-4 text-primary/80 hover:text-foreground"
