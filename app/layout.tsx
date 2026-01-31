@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { BottomNavbar } from "@/components/bottom-navbar";
+import { ScrollRestoration } from "@/components/scroll-restoration";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 
@@ -22,6 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
@@ -34,7 +37,9 @@ export default function RootLayout({
           // disableTransitionOnChange
         >
           <ThemeToggle />
+        <ScrollRestoration />
         {children}
+        <BottomNavbar />
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-VCMMB9PKDS" />

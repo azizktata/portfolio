@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background relative">
       {/* lg:py-32 lg:px-16 */}
-
+    
       <div
         className="
     pointer-events-none
@@ -51,7 +51,7 @@ export default function Home() {
                 View resume
               </Button>
             </Link>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <Link
                 href="https://www.linkedin.com/in/aziz-ktata-4ab8a01b8/"
                 target="_blank"
@@ -68,14 +68,14 @@ export default function Home() {
               >
                 <SiGithub size={20} className="" />
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <div id="right" className="flex flex-col md:py-24 max-w-2xl">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
           <div className="mb-8 flex flex-col gap-4">
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              I'm passionate about turning ideas into reliable, well-crafted
+              I&apos;m passionate about turning ideas into reliable, well-crafted
               digital products. I enjoy working on complex problems, designing
               clean architectures, and building solutions that are both
               user-focused and technically sound.
@@ -90,8 +90,8 @@ export default function Home() {
           <div className="mb-12">
             <TechStack />
           </div>
-          <div id="experiance" className="mb-12 ">
-            <h2 className="uppercase font-bold text-md mb-6">Experiance</h2>
+          <div id="experience" className="mb-12 ">
+            <h2 className="uppercase font-bold text-md mb-6">Experience</h2>
             <div className="flex flex-col gap-6 items-stretch group/list">
               <CardExperiance
                 timeline="2025 - Present"

@@ -1,7 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Badge } from "./ui/badge";
-import { ArrowUpRight, User2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CardProject({
   title,
@@ -21,11 +22,19 @@ export default function CardProject({
       <div className="group flex flex-col items-start sm:flex-row sm:gap-6 group/card hover:bg-gray-50 dark:hover:bg-white/5 hover:backdrop-blur-lg hover:drop-shadow-sm p-3 rounded-md transition-all duration-200 group-hover/list:opacity-60 hover:opacity-100">
         <div className="flex flex-col sm:order-2">
           <div className="flex items-center gap-1 group group-hover:text-primary cursor-pointer mb-2 ">
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <h3 className="text-md font-semibold group-hover:text-primary transition-colors duration-200">
-                {title}
-              </h3>
-            </a>
+            {link?.startsWith("/") ? (
+              <Link href={link}>
+                <h3 className="text-md font-semibold group-hover:text-primary transition-colors duration-200">
+                  {title}
+                </h3>
+              </Link>
+            ) : (
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <h3 className="text-md font-semibold group-hover:text-primary transition-colors duration-200">
+                  {title}
+                </h3>
+              </a>
+            )}
             <ArrowUpRight
               size={16}
               className="group-hover:-translate-y-1 group-hover:text-primary transition-transform"
