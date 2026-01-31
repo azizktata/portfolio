@@ -18,6 +18,7 @@ export default function CardProjectV2({
   github,
   liveDemo,
   objectLeft,
+  id,
 }: {
   inverted?: boolean;
   subtitle: string;
@@ -28,12 +29,13 @@ export default function CardProjectV2({
   github?: string;
   liveDemo?: string;
   objectLeft?: boolean
+  id?: string;
 }) {
   return (
     <>
       {/* MOBILE VIEW: Visible only on screens smaller than 640px (sm) */}
       <div
-        id="project-card-v2-mobile"
+        id={id}
         className="flex sm:hidden relative w-full shadow-md rounded-md overflow-hidden"
       >
         {/* 1. THE BACKGROUND IMAGE - Now fills the container without defining height */}
@@ -83,7 +85,7 @@ export default function CardProjectV2({
       </div>
 
       {/* DESKTOP VIEW: Visible only from 640px (sm) and up */}
-      <div id="project-card-v2-desktop" className="hidden sm:flex items-center">
+      <div id={id} className="hidden sm:flex items-center">
         <div className={cn(
           "flex flex-col items-start -mr-16 z-10 order-1",
           inverted && "flex-col items-end -ml-16 -mr-0 order-2"

@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Badge } from "./ui/badge";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, User2 } from "lucide-react";
 
 export default function CardProject({
   title,

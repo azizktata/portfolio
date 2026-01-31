@@ -7,9 +7,7 @@ import CardProject from "@/components/card-project";
 import Link from "next/link";
 import CardExperiance from "@/components/card-experiance";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import CarouselLogosClient from "@/components/carousel-logos-wrapper";
-import CarouselLogos from "@/components/carousel-logos";
-
+import TechStack from "@/components/tech-stack";
 
 export default function Home() {
   return (
@@ -32,25 +30,26 @@ export default function Home() {
           <h1 className="text-5xl md:text-4xl lg:text-5xl font-bold tracking-wider mb-1">
             Aziz Ktata
           </h1>
-          <h3 className="text-lg font-medium mb-6 md:mb-8">Full stack developer</h3>
+          <h3 className="text-lg font-medium mb-6 md:mb-8">
+            Full stack developer
+          </h3>
           <p className="text-sm md:text-md max-w-lg text-foreground mb-8">
             I design, build, and ship scalable web platforms.
           </p>
-          <div className="flex gap-4 mb-4 md:mb-12">
+          <div className="flex gap-4 mb-4 md:mb-6">
             <Link
               href="/AzizKtata__Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               // className="w-fit bg-primary/80 text-white"
             >
-            <Button
-              variant="default"
-              size="lg"
-              className="w-fit bg-primary/80 text-white"
-              
-            >
-              View resume
-            </Button>
+              <Button
+                variant="default"
+                size="lg"
+                className="w-fit bg-primary/80 text-white"
+              >
+                View resume
+              </Button>
             </Link>
             <div className="flex items-center gap-4">
               <Link
@@ -71,23 +70,25 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <CarouselLogos/>
         </div>
         <div id="right" className="flex flex-col md:py-24 max-w-2xl">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
-          <div className="mb-12 flex flex-col gap-4">
+          <div className="mb-8 flex flex-col gap-4">
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              I’m passionate about turning ideas into reliable, well-crafted
+              I'm passionate about turning ideas into reliable, well-crafted
               digital products. I enjoy working on complex problems, designing
               clean architectures, and building solutions that are both
               user-focused and technically sound.
             </p>
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
               I specialize in designing and building scalable web platforms from
-              architecture to production. I worked with Laravel, React,
-              Next.js, Springboot & Angular, delivering solutions for SaaS, e-commerce, and
-              multi-tenant applications.
+              architecture to production. I worked with Laravel, React, Next.js,
+              Springboot & Angular, delivering solutions for SaaS, e-commerce,
+              and multi-tenant applications.
             </p>
+          </div>
+          <div className="mb-12">
+            <TechStack />
           </div>
           <div id="experiance" className="mb-12 ">
             <h2 className="uppercase font-bold text-md mb-6">Experiance</h2>
@@ -101,7 +102,20 @@ export default function Home() {
                   "Improved applications performance by optimizing database queries, implementing caching strategies and enhancing code maintainability.",
                   "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
                 ]}
-                techStack={["Laravel", "React", "Next.js", "Tailwind CSS", "Figma", "MySQL", 'WordPress', "Prisma", "Netlify", "OVH", "Docker", "GitHub"]}
+                techStack={[
+                  "Laravel",
+                  "React",
+                  "Next.js",
+                  "Tailwind CSS",
+                  "Figma",
+                  "MySQL",
+                  "WordPress",
+                  "Prisma",
+                  "Netlify",
+                  "OVH",
+                  "Docker",
+                  "GitHub",
+                ]}
               />
               <CardExperiance
                 timeline="2024 / 6 months"
@@ -111,7 +125,14 @@ export default function Home() {
                   "Fine-tuned & integrated LLM for complaints categorization and response generation for improved customer support.",
                   "Implemented CI/CD pipelines using GitLab and Ansible to automate testing and deployment processes.",
                 ]}
-                techStack={["Springboot", "Angular", "TypeScript", "PostgreSQL", 'GitLab', "Ansible"]}
+                techStack={[
+                  "Springboot",
+                  "Angular",
+                  "TypeScript",
+                  "PostgreSQL",
+                  "GitLab",
+                  "Ansible",
+                ]}
               />
               <CardExperiance
                 timeline="2022 / 1 month"
@@ -120,7 +141,14 @@ export default function Home() {
                   "Deployed backend service using Docker and Kubernetes on Google Cloud Platform.",
                   "Configured Prometheus and Grafana to monitor cloud infrastructure and applications, providing real-time alerts.",
                 ]}
-                techStack={["Docker", "Kubernetes", "GCP", "Prometheus", "Grafana", "Linux"]}
+                techStack={[
+                  "Docker",
+                  "Kubernetes",
+                  "GCP",
+                  "Prometheus",
+                  "Grafana",
+                  "Linux",
+                ]}
               />
             </div>
           </div>
@@ -128,21 +156,29 @@ export default function Home() {
             <h2 className="text-md font-bold mb-6 uppercase">Projects</h2>
             <div className="group/list">
               <CardProject
-                title="Built property rental management system"
-                description="A multi-tenant SaaS platform for property rental management, includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features."
+                title="Property rental management system"
+                description="A multi-tenant SaaS platform for property rental management with a certified channel manager (50+ booking platforms), full reservation lifecycle management, owner & guest portals, CRM, accounting, and automation. Currently used by 10 active users."
                 // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
                 imageSrc={thelandlord}
                 // link="https://new-manager.thelandlord.tn/dashboard"
                 techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}
+                link="/projects#thelandlord"
               />
               <CardProject
-                title="Built timesheet accounting system"
-                description="timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
+                title="Timesheet accounting system"
+                description="Timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
                 imageSrc={timesheet}
-                techStack={["Laravel", "React", "Tailwind CSS", "MySQL", "Docker"]}
+                techStack={[
+                  "Laravel",
+                  "React",
+                  "Tailwind CSS",
+                  "MySQL",
+                  "Docker",
+                ]}
+                link="/projects#timesheet"
               />
               <CardProject
-                title="Built e-commerce platform"
+                title="E-commerce platform"
                 description="A modern e-commerce solution with a user-friendly storefront, admin dashboard, and general features like product management and shopping cart"
                 imageSrc={ramtec}
                 techStack={[
@@ -154,6 +190,7 @@ export default function Home() {
                   "NextAuth",
                   "Redux",
                 ]}
+                link="/projects#ramtec"
               />
             </div>
 

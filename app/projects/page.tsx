@@ -13,6 +13,8 @@ import skyflow from "../../public/skyflow.png";
 import epigreenvision from "../../public/epigreenvision.png";
 import gafvoyages from "../../public/gafvoyages.png";
 import parcauto from "../../public/parcauto.png";
+import truvisory from "../../public/truvisory.png";
+import groupeagence from "../../public/groupeagence.png";
 export default function Projects() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
@@ -48,6 +50,8 @@ export default function Projects() {
             // github="https://github.com/username/thelandlord"
             // liveDemo="https://example.com/thelandlord"
             objectLeft={true}
+            id="thelandlord"
+
           />
           <CardProjectV2
             subtitle="Timesheet"
@@ -59,6 +63,7 @@ export default function Projects() {
             // liveDemo="https://example.com/timesheet"
             inverted={true}
             objectLeft={true}
+            id="timesheet"
           />
           <CardProjectV2
             subtitle="Ramtec"
@@ -76,6 +81,7 @@ export default function Projects() {
             github="https://github.com/azizktata/ramtec-ecommerce/tree/frontstore-v3"
             liveDemo="https://ramtec-ecommerce.vercel.app/"
             objectLeft={true}
+            id="ramtec"
           />
 
           <CardProjectV2
@@ -121,6 +127,33 @@ export default function Projects() {
             ]}
             // github="https://github.com/azizktata/mbio7"
             liveDemo="https://mbio7.vercel.app/en"
+            inverted={true}
+          />
+           <CardProjectV2
+            subtitle="Groupe Agence"
+            title="Travel & Tourism Agency"
+            description="A travel and tourism agency based in Cote d'Ivoire, offering a variety of travel packages and services to customers."
+            imageSrc={groupeagence}
+            techStack={[
+              "Next.js",
+              "Tailwind CSS",
+              "Shadcn UI",
+            ]}
+            github="https://github.com/azizktata/groupe-agence"
+            liveDemo="https://groupe-agence.vercel.app/"
+          />
+           <CardProjectV2
+            subtitle="Truvisory"
+            title="Accounting & Advisory Firm"
+            description="Accounting and advisory firm based in Tunisia, offering services to businesses and individuals including auditing, tax consulting, and financial advisory."
+            imageSrc={truvisory}
+            techStack={[
+              "Next.js",
+              "Tailwind CSS",
+              "Shadcn UI",
+            ]}
+            github="https://github.com/azizktata/Truvisory"
+            liveDemo="https://truvisory.vercel.app/"
             inverted={true}
           />
           <CardProjectV2

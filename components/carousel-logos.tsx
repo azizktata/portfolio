@@ -72,44 +72,57 @@ export default function CarouselLogos() {
   ];
   
     return (
-      <div className="hidden md:flex relative overflow-hidden  flex gap-16  max-w-md max-h-64 px-2">
-        {/* Basic horizontal loop */}
-        <LogoLoop
-          logos={frontTechLogos}
-          speed={30}
-          direction="up"
-          logoHeight={36}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
-        <LogoLoop
-          logos={backTechLogos}
-          speed={30}
-          direction="down"
-          logoHeight={36}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
-        <LogoLoop
-          logos={devopsTechLogos}
-          speed={40}
-          direction="up"
-          logoHeight={36}
-          gap={40}
-          hoverSpeed={0}
-          scaleOnHover
-          // fadeOut
-          // fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
+      <div className="hidden lg:flex flex-col gap-4 max-w-md max-h-72 px-2">
+        {/* Frontend Stack */}
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-medium text-muted-foreground w-20 shrink-0">Frontend</span>
+          <div className="relative overflow-hidden max-h-16">
+            <LogoLoop
+              logos={frontTechLogos}
+              speed={30}
+              direction="right"
+              logoHeight={32}
+              gap={32}
+              hoverSpeed={0}
+              scaleOnHover
+              ariaLabel="Frontend technologies"
+            />
+          </div>
+        </div>
+
+        {/* Backend Stack */}
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-medium text-muted-foreground w-20 shrink-0">Backend</span>
+          <div className="relative overflow-hidden max-h-16">
+            <LogoLoop
+              logos={backTechLogos}
+              speed={25}
+              direction="left"
+              logoHeight={32}
+              gap={32}
+              hoverSpeed={0}
+              scaleOnHover
+              ariaLabel="Backend technologies"
+            />
+          </div>
+        </div>
+
+        {/* DevOps Stack */}
+        <div className="flex items-center gap-4">
+          <span className="text-sm font-medium text-muted-foreground w-20 shrink-0">DevOps</span>
+          <div className="relative overflow-hidden max-h-16">
+            <LogoLoop
+              logos={devopsTechLogos}
+              speed={35}
+              direction="right"
+              logoHeight={32}
+              gap={32}
+              hoverSpeed={0}
+              scaleOnHover
+              ariaLabel="DevOps technologies"
+            />
+          </div>
+        </div>
       </div>
     );
   

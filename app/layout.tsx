@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default function RootLayout({
         {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-VCMMB9PKDS" />
     </html>
   );
 }
