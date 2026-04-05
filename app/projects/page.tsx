@@ -37,7 +37,7 @@ export default function Projects() {
           <CardProjectV2
             subtitle="Kibar Oulama University"
             title="E-learning Platform for Islamic Studies"
-            description="Senior scholars project to facilitate the students of knowledge, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
+            description="E-learning Platform to facilitate the students of knowledge to learn Sharia, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
             imageSrc={kibbaroulama}
             liveDemo="https://kibbarulmauniversity.netlify.app/"
             techStack={["Next.js", "Tailwind CSS", "Turso"]}
@@ -47,7 +47,7 @@ export default function Projects() {
           />
           <CardProjectV2
             subtitle="TheLandlord"
-            title="Property Management Platform"
+            title="Property Rental Management Platform"
             description="A scalable, multi-tenant property management platform designed for short-term rentals, recognized at the Global Proptech & Contech Awards 2026 in Dubai. 
              The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
              "
