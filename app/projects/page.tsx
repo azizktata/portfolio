@@ -13,7 +13,7 @@ import skyflow from "../../public/skyflow.png";
 import epigreenvision from "../../public/epigreenvision.png";
 import gafvoyages from "../../public/gafvoyages.png";
 import parcauto from "../../public/parcauto.png";
-import truvisory from "../../public/truvisory.png";
+import truvisory from "../../public/truvisory.jpg";
 import groupeagence from "../../public/groupeagence.png";
 import kibbaroulama from "../../public/kibar-oulama.jpg";
 import heilosante from "../../public/heilo.jpg";
