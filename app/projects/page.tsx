@@ -16,6 +16,7 @@ import parcauto from "../../public/parcauto.png";
 import truvisory from "../../public/truvisory.png";
 import groupeagence from "../../public/groupeagence.png";
 import kibbaroulama from "../../public/kibar-oulama.jpg";
+import heilosante from "../../public/heilo.jpg";
 
 export default function Projects() {
   return (
@@ -63,6 +64,7 @@ export default function Projects() {
             // github="https://github.com/username/thelandlord"
             // liveDemo="https://example.com/thelandlord"
             objectLeft={true}
+            inverted={true}
             id="thelandlord"
 
           />
@@ -74,11 +76,11 @@ export default function Projects() {
             techStack={["Laravel", "React", "Tailwind CSS", "MySQL", "Docker"]}
             // github="https://github.com/username/timesheet"
             // liveDemo="https://example.com/timesheet"
-            inverted={true}
+            
             objectLeft={true}
             id="timesheet"
           />
-          <CardProjectV2
+          {/* <CardProjectV2
             subtitle="Ramtec"
             title="E-commerce Platform"
             description="A modern e-commerce platform with a custom storefront and admin dashboard, supporting product management, cart, orders, and email automation."
@@ -95,7 +97,7 @@ export default function Projects() {
             liveDemo="https://ramtec-ecommerce.vercel.app/"
             objectLeft={true}
             id="ramtec"
-          />
+          /> */}
 
           <CardProjectV2
             subtitle="Marine Keys"
@@ -130,13 +132,14 @@ export default function Projects() {
           <CardProjectV2
             subtitle="mBio7"
             title="Wood Panel Construction Material"
-            description="Molded wood panel that enables easy and rapid construction of sustainable buildings patented product developed by WoodWise company."
+            description="Marketing website for a French startup to showcase their patented sustainable construction materials. Built the site from the ground up to support the company’s growth and present their molded wood panel technology to a global market"
             imageSrc={mbio7}
             techStack={[
               "Next.js",
               "Tailwind CSS",
               "I18n",
               "Shadcn UI",
+              "Wordpress headless CMS",
             ]}
             // github="https://github.com/azizktata/mbio7"
             liveDemo="https://mbio7.vercel.app/en"
@@ -145,15 +148,33 @@ export default function Projects() {
            <CardProjectV2
             subtitle="Groupe Agence"
             title="Travel & Tourism Agency"
-            description="A travel and tourism agency based in Cote d'Ivoire, offering a variety of travel packages and services to customers."
+            description="A travel and tourism agency based in Cote d'Ivoire, offering a variety of travel packages and services to customers. with third party booking engine API integration for flights and hotels."
             imageSrc={groupeagence}
             techStack={[
               "Next.js",
               "Tailwind CSS",
               "Shadcn UI",
+              "Figma",
             ]}
-            github="https://github.com/azizktata/groupe-agence"
+            // github="https://github.com/azizktata/groupe-agence"
             liveDemo="https://groupe-agence.vercel.app/"
+            objectLeft={true}
+          />
+           <CardProjectV2
+            subtitle="HEILO SANTE"
+            title="Clean Room Design & Installation"
+            description="A Company expert in the design, manufacture and installation of clean rooms to the most demanding international standards."
+            techStack={[
+              "Next.js",
+              "Tailwind CSS",
+              "Figma",
+              "Loveable",
+              "Shadcn UI",
+            ]}
+            imageSrc={heilosante}
+            liveDemo="https://helo-sante.netlify.app/"
+            objectLeft={true}
+            inverted={true}
           />
            <CardProjectV2
             subtitle="Truvisory"
@@ -163,16 +184,17 @@ export default function Projects() {
             techStack={[
               "Next.js",
               "Tailwind CSS",
+              "Loveable",
               "Shadcn UI",
             ]}
-            github="https://github.com/azizktata/Truvisory"
+            // github="https://github.com/azizktata/Truvisory"
             liveDemo="https://truvisory.vercel.app/"
-            inverted={true}
+           
           />
           <CardProjectV2
             subtitle="GafVoyages.tn"
             title="Travel Agency Site"
-            description="A travel agency website based in Tunisia offering a variety of travel packages and services to customers."
+            description="A travel agency website based in Tunisia offering a variety of travel packages and services to customers. with Sanity CMS for managing travel packages, bookings, and customer inquiries."
             imageSrc={gafvoyages}
             techStack={[
               "Next.js",
@@ -180,12 +202,12 @@ export default function Projects() {
               "Sanity CMS",
               "Shadcn UI",
             ]}
-            github="https://github.com/azizktata/gaf-travel-events"
+            // github="https://github.com/azizktata/gaf-travel-events"
             liveDemo="https://www.gafvoyages.tn/"
-
+            inverted={true}
 
           />
-          <CardProjectV2
+          {/* <CardProjectV2
             subtitle="SkyFlow"
             title="Import Export Enterprise"
             description="Import export company for various products with global suppliers and customers."
@@ -214,9 +236,9 @@ export default function Projects() {
             github="https://github.com/azizktata/epi-green-vision"
             liveDemo="https://www.epigreenvision.com/"
 
-          />
+          /> */}
           <CardProjectV2
-            subtitle="Side Project"
+            subtitle="ParcAuto"
             title="Car Rental Service"
             description="A car rental service platform allowing users to browse, book, and manage vehicle rentals with ease, optimizing vehicle fleet management for the service provider."
             imageSrc={parcauto}
@@ -228,7 +250,7 @@ export default function Projects() {
             ]}
             github="https://github.com/azizktata/Car-Rental-Management/tree/main"
             // liveDemo="https://www.epigreenvision.com/"
-            inverted={true}
+          
             objectLeft={true}
           />
         </div>

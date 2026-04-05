@@ -184,7 +184,7 @@ export default function Home() {
                 ]}
                 link="/projects#timesheet"
               />
-              <CardProject
+              {/* <CardProject
                 title="E-commerce platform"
                 description="A modern e-commerce solution with a user-friendly storefront, admin dashboard, and general features like product management and shopping cart"
                 imageSrc={ramtec}
@@ -198,7 +198,7 @@ export default function Home() {
                   "Redux",
                 ]}
                 link="/projects#ramtec"
-              />
+              /> */}
             </div>
 
             <Link href="/projects">
