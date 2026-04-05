@@ -159,7 +159,6 @@ export default function Home() {
                 imageSrc={kibbaroulama}
                 link="https://kibbarulmauniversity.netlify.app/"
                 techStack={["Next.js", "Tailwind CSS", "Turso"]}
-                link="/projects#kibar-oulama"
               />
               <CardProject
                 title="Property rental management system"
