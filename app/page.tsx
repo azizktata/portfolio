@@ -81,8 +81,7 @@ export default function Home() {
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
               Specializing in building scalable web platforms from
               architecture to production. I worked with Laravel, React, Next.js,
-              Springboot & Angular, delivering solutions for SaaS, e-commerce,
-              and multi-tenant applications.
+              Springboot & Angular, delivering tailored solutions for diverse clients, from startups to established enterprises.
             </p>
           </div>
           <div className="mb-12">
