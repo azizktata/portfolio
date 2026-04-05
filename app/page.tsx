@@ -154,7 +154,7 @@ export default function Home() {
             <div className="group/list">
               <CardProject
                 title="جامعة كبار العلماء"
-                description="Senior scholars project to facilitate the students of knowledge, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
+                description="Senior scholars project to facilitate the students of knowledge to learn Islamic sciences, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
                 // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
                 imageSrc={kibbaroulama}
                 link="https://kibbarulmauniversity.netlify.app/"
