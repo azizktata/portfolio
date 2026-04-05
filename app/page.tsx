@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import thelandlord from "../public/thelandlord.png";
+import kibbaroulama from "../public/kibar-oulama.jpg";
 import ramtec from "../public/ramtec-1.png";
 import timesheet from "../public/timesheet-1.png";
 import CardProject from "@/components/card-project";
 import Link from "next/link";
 import CardExperiance from "@/components/card-experiance";
-import { SiGithub, SiLinkedin } from "react-icons/si";
 import TechStack from "@/components/tech-stack";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background relative">
       {/* lg:py-32 lg:px-16 */}
-    
+
       <div
         className="
     pointer-events-none
@@ -75,13 +75,11 @@ export default function Home() {
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
           <div className="mb-8 flex flex-col gap-4">
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              I&apos;m passionate about turning ideas into reliable, well-crafted
-              digital products. I enjoy working on complex problems, designing
-              clean architectures, and building solutions that are both
-              user-focused and technically sound.
+              I’m a developer passionate about building high-quality digital
+              products, I enjoy solving complex problems and continuously learning new technologies.
             </p>
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              I specialize in designing and building scalable web platforms from
+              Specializing in building scalable web platforms from
               architecture to production. I worked with Laravel, React, Next.js,
               Springboot & Angular, delivering solutions for SaaS, e-commerce,
               and multi-tenant applications.
@@ -97,10 +95,10 @@ export default function Home() {
                 timeline="2025 - Present"
                 position="Full Stack Developer @ Asis.tn"
                 description={[
-                  "Developed multiple responsive, SEO-friendly websites with Next.js, TailwindCSS, and WordPress as a headless CMS.",
-                  "Migrated legacy laravel systems, delivering full UI/UX redesigns, and implementing multi-tenant architectures",
-                  "Improved applications performance by optimizing database queries, implementing caching strategies and enhancing code maintainability.",
-                  "Provided continuous production support for ~9 months resolving bugs, performance issues, and feature requests.",
+                  "Responsible for building web platforms from design to deployment, using Next.js, Tailwind CSS, and Headless WordPress.",
+                  "Managed the migration of legacy Laravel systems, delivering complete UI/UX redesigns and implementing multi-tenant architectures.",
+                  "Optimized application performance and scalability by refactoring code for better readability, refining database queries, and implementing caching strategies.",
+                  "Handled continuous production support, resolving critical bugs and deploying new features to ensure system stability.",
                 ]}
                 techStack={[
                   "Laravel",
@@ -121,9 +119,9 @@ export default function Home() {
                 timeline="2024 / 6 months"
                 position="Full stack developer intern @ Sofrecom"
                 description={[
-                  "Collaborated in an Agile team to develop a single-page application for managing complaints using Spring Boot, JWT-based RBAC, and Angular.",
-                  "Fine-tuned & integrated LLM for complaints categorization and response generation for improved customer support.",
-                  "Implemented CI/CD pipelines using GitLab and Ansible to automate testing and deployment processes.",
+                  "Collaborated in an Agile environment to develop a single-page application for managing complaints using Spring Boot, JWT-based RBAC, and Angular.",
+                  "Integrated and fine-tuned a Large Language Model (LLM) to automate complaint categorization and generate intelligent customer support responses.",
+                  "Automated the development lifecycle by implementing CI/CD pipelines with GitLab and Ansible for seamless testing and deployment.",
                 ]}
                 techStack={[
                   "Springboot",
@@ -134,7 +132,7 @@ export default function Home() {
                   "Ansible",
                 ]}
               />
-              <CardExperiance
+              {/* <CardExperiance
                 timeline="2022 / 1 month"
                 position="DevOps intern @ Tunisie Telecom"
                 description={[
@@ -149,12 +147,21 @@ export default function Home() {
                   "Grafana",
                   "Linux",
                 ]}
-              />
+              /> */}
             </div>
           </div>
           <div id="projects" className="">
             <h2 className="text-md font-bold mb-6 uppercase">Projects</h2>
             <div className="group/list">
+              <CardProject
+                title="جامعة كبار العلماء"
+                description="Senior scholars project to facilitate the students of knowledge, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
+                // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
+                imageSrc={kibbaroulama}
+                link="https://kibbarulmauniversity.netlify.app/"
+                techStack={["Next.js", "Tailwind CSS", "Turso"]}
+                link="/projects#kibar-oulama"
+              />
               <CardProject
                 title="Property rental management system"
                 description="A multi-tenant SaaS platform for property rental management with a certified channel manager (50+ booking platforms), full reservation lifecycle management, owner & guest portals, CRM, accounting, and automation. Currently used by 10 active users."

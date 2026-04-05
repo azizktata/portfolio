@@ -15,6 +15,8 @@ import gafvoyages from "../../public/gafvoyages.png";
 import parcauto from "../../public/parcauto.png";
 import truvisory from "../../public/truvisory.png";
 import groupeagence from "../../public/groupeagence.png";
+import kibbaroulama from "../../public/kibar-oulama.jpg";
+
 export default function Projects() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background ">
@@ -31,6 +33,17 @@ export default function Projects() {
           <h2 className="text-4xl font-bold">All Projects</h2>
         </div>
         <div className="flex flex-col gap-12  mx-auto w-full">
+          <CardProjectV2
+            subtitle="Kibar Oulama University"
+            title="E-learning Platform for Islamic Studies"
+            description="Senior scholars project to facilitate the students of knowledge, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
+            imageSrc={kibbaroulama}
+            liveDemo="https://kibbarulmauniversity.netlify.app/"
+            techStack={["Next.js", "Tailwind CSS", "Turso"]}
+            id="kibar-oulama"
+            
+
+          />
           <CardProjectV2
             subtitle="TheLandlord"
             title="Property Management Platform"

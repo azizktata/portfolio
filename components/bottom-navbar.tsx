@@ -51,7 +51,7 @@ export function BottomNavbar() {
           "shadow-lg shadow-black/5"
         )}
       >
-        {navLinks.map((link) => (
+        {/* {navLinks.map((link) => (
           <Link
             key={link.label}
             href={link.href}
@@ -65,7 +65,7 @@ export function BottomNavbar() {
             <link.icon className="w-5 h-5" />
           </Link>
         ))}
-        <div className="w-px h-5 bg-foreground/20 mx-1" />
+        <div className="w-px h-5 bg-foreground/20 mx-1" /> */}
         {socialLinks.map((link) => (
           <Link
             key={link.label}
