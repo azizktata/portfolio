@@ -13,9 +13,9 @@ export default function CardExperiance({
 }) {
   return (
     <div className="group/card group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-200">
-      <div className="flex gap-5 p-4 rounded-lg hover:bg-card transition-colors duration-200">
+      <div className="flex gap-5  rounded-lg hover:bg-card flex-col md:flex-row md:p-4 transition-colors duration-200">
         {/* Timeline */}
-        <span className="text-[10px] font-mono text-muted-foreground whitespace-nowrap w-20 shrink-0 mt-0.5 leading-relaxed">
+        <span className="text-[12px] font-mono text-muted-foreground whitespace-nowrap w-20 shrink-0 mt-0.5 leading-relaxed">
           {timeline}
         </span>
 

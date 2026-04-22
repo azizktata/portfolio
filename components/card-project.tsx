@@ -29,9 +29,9 @@ export default function CardProject({
   return (
     <div className="group/card group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-200 mb-2">
       <Wrapper>
-        <div className="flex gap-5 p-4 rounded-lg hover:bg-card transition-colors duration-200 cursor-pointer">
+        <div className="flex gap-5 flex-col md:flex-row md:p-4 rounded-lg hover:bg-card transition-colors duration-200 cursor-pointer">
           {/* Index number */}
-          <span className="text-[10px] font-mono text-primary/60 mt-1 w-5 shrink-0 select-none">
+          <span className="text-[12px] font-mono text-primary/60 mt-1 w-5 shrink-0 select-none">
             {String(index).padStart(2, "0")}
           </span>
 
