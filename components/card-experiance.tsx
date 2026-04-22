@@ -1,6 +1,4 @@
 import React from "react";
-import { Badge } from "./ui/badge";
-import { Triangle, TriangleRight } from "lucide-react";
 
 export default function CardExperiance({
   timeline,
@@ -14,39 +12,35 @@ export default function CardExperiance({
   techStack: string[];
 }) {
   return (
-    <div className="">
-      <div
-        id="experiance-card"
-        className="
-        group flex flex-col sm:flex-row sm:gap-6 group/card hover:bg-gray-50 hover:backdrop-blur-lg hover:drop-shadow-sm dark:hover:bg-white/10  p-3 rounded-md transition-all duration-200 group-hover/list:opacity-60 hover:opacity-100"
-      >
-        <h3 className="text-gray-400 font-base text-xs whitespace-nowrap w-24 mt-1 ">
+    <div className="group/card group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-200">
+      <div className="flex gap-5 p-4 rounded-lg hover:bg-card transition-colors duration-200">
+        {/* Timeline */}
+        <span className="text-[10px] font-mono text-muted-foreground whitespace-nowrap w-20 shrink-0 mt-0.5 leading-relaxed">
           {timeline}
-        </h3>
-        <div className="flex flex-col items-start gap-4">
-          <h4 className="font-bold text-md group-hover:text-primary transition-colors duration-200">
+        </span>
+
+        {/* Content */}
+        <div className="flex flex-col gap-3">
+          <h4 className="text-sm font-semibold leading-snug group-hover/card:text-primary transition-colors duration-200">
             {position}
           </h4>
-          <ul className="text-sm max-w-lg text-foreground list-disc list-inside space-y-2">
-            {
-              description.map((point, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Triangle size={14} className="rotate-90 mt-1 text-primary" />{" "}
-                  {point}
-                </li>
-              ))
-            }
-           
-             
+
+          <ul className="flex flex-col gap-2">
+            {description.map((point, index) => (
+              <li key={index} className="text-xs text-muted-foreground leading-relaxed pl-3 relative before:content-[''] before:absolute before:left-0 before:top-[0.45em] before:w-1 before:h-1 before:rounded-full before:bg-primary/50">
+                {point}
+              </li>
+            ))}
           </ul>
-          <div className="flex flex-wrap gap-2">
+
+          <div className="flex flex-wrap gap-1.5">
             {techStack.map((tech) => (
-              <Badge
+              <span
                 key={tech}
-                className="bg-primary-foreground text-primary py-1 text-xs"
+                className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-primary/8 text-primary border border-primary/15"
               >
                 {tech}
-              </Badge>
+              </span>
             ))}
           </div>
         </div>

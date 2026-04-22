@@ -38,7 +38,7 @@ export default function Projects() {
           <CardProjectV2
             subtitle="Kibar Oulama University"
             title="Modern Islamic E-Learning Platform"
-            description="The curriculum existed. The scholars' audios existed. The website didn't do them justice. I scraped the full curriculum, rebuilt the platform from scratch, and delivered a modern e-learning experience — with progress tracking, a lesson player that saves your place, full-text search across all courses, a notes system, transcript viewer, and YouTube playlist integration. Built to make sacred knowledge easier to access, and compelling enough to keep students coming back."
+            description={<>The organisation had an <a href="https://kibbarulmauni.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:opacity-80 transition-opacity">existing website</a> that didn&apos;t do the curriculum justice. I scraped the full curriculum, rebuilt the platform from scratch, and delivered a modern e-learning experience — with progress tracking, a lesson player that saves your place, full-text search across all courses, a notes system, transcript viewer, and YouTube playlist integration. Built to make sacred knowledge easier to access, and compelling enough to keep students coming back.</>}
             imageSrc={kibbaroulama}
             liveDemo="https://kibbarulmauniversity.netlify.app/"
             techStack={["Next.js", "Tailwind CSS", "Turso"]}

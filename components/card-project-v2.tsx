@@ -1,5 +1,6 @@
 'use client';
 
+import React from "react";
 import { SquareArrowOutUpRight } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -23,7 +24,7 @@ export default function CardProjectV2({
   inverted?: boolean;
   subtitle: string;
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   imageSrc: StaticImageData;
   techStack: string[];
   github?: string;

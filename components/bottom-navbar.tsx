@@ -5,19 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { useEffect, useRef } from "react";
 
 const navLinks = [
-  {
-    href: "/",
-    icon: Home,
-    label: "Home",
-  },
-  {
-    href: "/projects",
-    icon: FolderKanban,
-    label: "Projects",
-  },
+  { href: "/", icon: Home, label: "Home" },
+  { href: "/projects", icon: FolderKanban, label: "Projects" },
 ];
 
 const socialLinks = [
@@ -39,33 +30,41 @@ const socialLinks = [
 ];
 
 export function BottomNavbar() {
+  const pathname = usePathname();
 
   return (
     <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
       <div
         className={cn(
-          "flex items-center gap-1 px-6 py-1 rounded-full",
-          "bg-gray-100/40 dark:bg-white/5",
-          "backdrop-blur-md",
-          "border border-gray/20 dark:border-white/10",
-          "shadow-lg shadow-black/5"
+          "flex items-center gap-0.5 px-2.5 py-2 rounded-full",
+          "bg-background/80 dark:bg-card/90",
+          "backdrop-blur-xl",
+          "border border-border",
+          "shadow-xl shadow-black/8 dark:shadow-black/30"
         )}
       >
-        {/* {navLinks.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            aria-label={link.label}
-            className={cn(
-              "p-2.5 rounded-full transition-all duration-200",
-              "hover:bg-white/20 dark:hover:bg-white/15",
-              "text-foreground/70 hover:text-foreground"
-            )}
-          >
-            <link.icon className="w-5 h-5" />
-          </Link>
-        ))}
-        <div className="w-px h-5 bg-foreground/20 mx-1" /> */}
+        {navLinks.map((link) => {
+          const active = pathname === link.href;
+          return (
+            <Link
+              key={link.label}
+              href={link.href}
+              aria-label={link.label}
+              className={cn(
+                "relative px-3 py-2 rounded-full transition-all duration-150 text-xs font-medium flex items-center gap-1.5",
+                active
+                  ? "text-primary bg-primary/10"
+                  : "text-muted-foreground hover:text-foreground hover:bg-accent"
+              )}
+            >
+              <link.icon className="w-3.5 h-3.5" />
+              <span>{link.label}</span>
+            </Link>
+          );
+        })}
+
+        <div className="w-px h-4 bg-border mx-1" />
+
         {socialLinks.map((link) => (
           <Link
             key={link.label}
@@ -74,12 +73,11 @@ export function BottomNavbar() {
             rel="noopener noreferrer"
             aria-label={link.label}
             className={cn(
-              "p-2.5 rounded-full transition-all duration-200",
-              "hover:bg-white/20 dark:hover:bg-white/15",
-              "text-foreground/70 hover:text-foreground"
+              "p-2.5 rounded-full transition-all duration-150",
+              "text-muted-foreground hover:text-foreground hover:bg-accent"
             )}
           >
-            <link.icon className="w-5 h-5" />
+            <link.icon className="w-3.5 h-3.5" />
           </Link>
         ))}
       </div>

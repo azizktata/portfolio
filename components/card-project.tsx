@@ -1,73 +1,77 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import { Badge } from "./ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export default function CardProject({
+  index,
   title,
   description,
   imageSrc,
   link,
   techStack,
 }: {
+  index: number;
   title: string;
   description: string;
   imageSrc: StaticImageData;
   link?: string;
   techStack: string[];
 }) {
-  return (
-    <div id="project" className="flex flex-col mb-8 sm:mb-12">
-      <div className="group flex flex-col items-start sm:flex-row sm:gap-6 group/card hover:bg-gray-50 dark:hover:bg-white/5 hover:backdrop-blur-lg hover:drop-shadow-sm p-3 rounded-md transition-all duration-200 group-hover/list:opacity-60 hover:opacity-100">
-        <div className="flex flex-col sm:order-2">
-          <div className="flex items-center gap-1 group group-hover:text-primary cursor-pointer mb-2 ">
-            {link?.startsWith("/") ? (
-              <Link href={link}>
-                <h3 className="text-md font-semibold group-hover:text-primary transition-colors duration-200">
-                  {title}
-                </h3>
-              </Link>
-            ) : (
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <h3 className="text-md font-semibold group-hover:text-primary transition-colors duration-200">
-                  {title}
-                </h3>
-              </a>
-            )}
-            <ArrowUpRight
-              size={16}
-              className="group-hover:-translate-y-1 group-hover:text-primary transition-transform"
-            />
-          </div>
-          <p className="text-sm max-w-md text-foreground mb-4">{description}</p>
+  const isInternal = link?.startsWith("/");
+  const Wrapper = ({ children }: { children: React.ReactNode }) =>
+    isInternal ? (
+      <Link href={link!}>{children}</Link>
+    ) : (
+      <a href={link} target="_blank" rel="noopener noreferrer">{children}</a>
+    );
 
-          <div className="flex items-center gap-2 flex-wrap hidden sm:flex">
-            {techStack.map((tech) => (
-              <Badge key={tech}  className="bg-primary-foreground text-primary py-1 text-xs">
-                {tech}
-              </Badge>
-            ))}
+  return (
+    <div className="group/card group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-200 mb-2">
+      <Wrapper>
+        <div className="flex gap-5 p-4 rounded-lg hover:bg-card transition-colors duration-200 cursor-pointer">
+          {/* Index number */}
+          <span className="text-[10px] font-mono text-primary/60 mt-1 w-5 shrink-0 select-none">
+            {String(index).padStart(2, "0")}
+          </span>
+
+          {/* Content */}
+          <div className="flex flex-col gap-3 flex-1 min-w-0">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="text-sm font-semibold leading-snug group-hover/card:text-primary transition-colors duration-200">
+                {title}
+              </h3>
+              <ArrowUpRight
+                size={14}
+                className="shrink-0 mt-0.5 text-muted-foreground group-hover/card:text-primary group-hover/card:-translate-y-0.5 group-hover/card:translate-x-0.5 transition-all duration-200"
+              />
+            </div>
+
+            <p className="text-xs text-muted-foreground leading-relaxed max-w-md">
+              {description}
+            </p>
+
+            {/* Image */}
+            <Image
+              src={imageSrc}
+              alt={title}
+              className="rounded-md object-cover object-left w-full h-36 opacity-80 group-hover/card:opacity-100 transition-opacity duration-200"
+            />
+
+            {/* Tech stack */}
+            <div className="flex flex-wrap gap-1.5">
+              {techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-primary/8 text-primary border border-primary/15"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="min-w-fit "> 
-
-        <Image
-          src={imageSrc}
-          alt={title}
-        
-          className="rounded-md object-cover object-left mb-4 sm:order-1 w-48 h-24"
-          />
-          </div>
-
-         <div className="flex items-center gap-2 flex-wrap sm:hidden">
-            {techStack.map((tech) => (
-              <Badge key={tech}  className="bg-primary-foreground text-primary py-1 text-xs">
-                {tech}
-              </Badge>
-            ))}
-          </div>
-      </div>
+      </Wrapper>
     </div>
   );
 }
