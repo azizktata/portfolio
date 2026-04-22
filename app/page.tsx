@@ -71,15 +71,15 @@ export default function Home() {
         <div id="right" className="flex flex-col md:py-24 max-w-2xl w-full">
 
           {/* About */}
-          <section className="mb-16">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">About</h2>
+          <section className="mb-12">
+            <h2 className="text-[12px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-6">About</h2>
             <div className="flex flex-col gap-4">
-              <p className="text-sm max-w-xl text-foreground leading-relaxed">
+              <p className="text-sm sm:text-base max-w-xl text-foreground leading-relaxed">
                 I build digital products that perform — from complex platforms to
                 conversion-focused marketing sites. I take ownership of the full
                 cycle: strategy, design, development, and delivery.
               </p>
-              <p className="text-sm max-w-xl text-foreground leading-relaxed">
+              <p className="text-sm sm:text-base max-w-xl text-foreground leading-relaxed">
                 My work spans SaaS platforms, B2B tools, marketplaces, and brand
                 websites — built with Laravel, React, Next.js, and everything in
                 between. Clients range from Tunisian startups to international
@@ -90,13 +90,13 @@ export default function Home() {
           </section>
 
           {/* Tech Stack */}
-          <section className="mb-16">
+          {/* <section className="mb-16">
             <TechStack />
-          </section>
+          </section> */}
 
           {/* Experience */}
           <section id="experience" className="mb-16">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Experience</h2>
+            <h2 className="text-[12px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Experience</h2>
             <div className="flex flex-col gap-4 group/list">
               <CardExperiance
                 timeline="2025 – Present"
@@ -144,12 +144,12 @@ export default function Home() {
 
           {/* Projects */}
           <section id="projects" className="mb-16">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Projects</h2>
+            <h2 className="text-[12px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Projects</h2>
             <div className="group/list">
               <CardProject
                 index={1}
                 title="Modern Islamic E-Learning Platform"
-                description="The curriculum existed. The scholars' audios existed. The website didn't do them justice. Rebuilt the platform from scratch with progress tracking, a lesson player, full-text search, notes system, and YouTube playlist integration."
+                description="The organisation had an existing website that didn't do the curriculum justice. I scraped the full curriculum, rebuilt the platform from scratch, and delivered a modern e-learning experience "
                 imageSrc={kibbaroulama}
                 techStack={["Next.js", "Tailwind CSS", "Turso"]}
                 link="https://kibbarulmauniversity.netlify.app/"
@@ -167,7 +167,7 @@ export default function Home() {
                 title="B2B Industrial Sales Platform"
                 description="Turned 30 years of expertise into a lead generation engine — 3000+ product catalog, technical search, RFQ module, and full documentation hub. MVP delivered in one day, full product in one week."
                 imageSrc={sogecor}
-                techStack={["Next.js", "Tailwind CSS", "Sanity CMS", "Shadcn UI"]}
+                techStack={["Next.js", "Tailwind CSS", "WordPress headless CMS", "Shadcn UI"]}
                 link="https://sogecor.netlify.app/"
               />
               <CardProject
@@ -188,7 +188,7 @@ export default function Home() {
 
           {/* Contact */}
           <section id="contact" className="mb-24">
-            <h2 className="text-[10px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Work Together</h2>
+            <h2 className="text-[12px] font-semibold tracking-[0.25em] uppercase text-muted-foreground mb-8">Work Together</h2>
             <div className="max-w-sm">
               <ContactForm />
             </div>

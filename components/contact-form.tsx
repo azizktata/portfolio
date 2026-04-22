@@ -8,9 +8,9 @@ import { CheckCircle } from "lucide-react";
 const SERVICES = [
   "Website Design & Dev",
   "SEO & Performance",
-  "Site Management",
   "Marketing & Copywriting",
   "Not sure yet",
+  // "Site Management",
 ];
 
 interface FormState {

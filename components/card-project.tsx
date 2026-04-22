@@ -29,16 +29,16 @@ export default function CardProject({
   return (
     <div className="group/card group-hover/list:opacity-50 hover:!opacity-100 transition-opacity duration-200 mb-2">
       <Wrapper>
-        <div className="flex gap-5 flex-col md:flex-row md:p-4 rounded-lg hover:bg-card transition-colors duration-200 cursor-pointer">
+        <div className="flex p-2 gap-2 md:gap-5 flex-col md:flex-row md:p-4 rounded-lg hover:bg-card transition-colors duration-200 cursor-pointer">
           {/* Index number */}
-          <span className="text-[12px] font-mono text-primary/60 mt-1 w-5 shrink-0 select-none">
+          <span className="text-[12px] sm:text-sm font-mono text-primary/60 mt-1 w-5 shrink-0 select-none">
             {String(index).padStart(2, "0")}
           </span>
 
           {/* Content */}
           <div className="flex flex-col gap-3 flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2">
-              <h3 className="text-sm font-semibold leading-snug group-hover/card:text-primary transition-colors duration-200">
+              <h3 className="text-base sm:text-md font-semibold leading-snug group-hover/card:text-primary transition-colors duration-200">
                 {title}
               </h3>
               <ArrowUpRight
@@ -47,7 +47,7 @@ export default function CardProject({
               />
             </div>
 
-            <p className="text-xs text-muted-foreground leading-relaxed max-w-md">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md sm:max-w-lg">
               {description}
             </p>
 
@@ -55,7 +55,7 @@ export default function CardProject({
             <Image
               src={imageSrc}
               alt={title}
-              className="rounded-md object-cover object-left w-full h-36 opacity-80 group-hover/card:opacity-100 transition-opacity duration-200"
+              className="rounded-md object-cover object-top w-full h-36 opacity-80 group-hover/card:opacity-100 transition-opacity duration-200"
             />
 
             {/* Tech stack */}
@@ -63,7 +63,7 @@ export default function CardProject({
               {techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-primary/8 text-primary border border-primary/15"
+                  className="text-[12px] font-medium px-2 py-0.5 rounded-full bg-primary/8 text-primary border border-primary/15"
                 >
                   {tech}
                 </span>

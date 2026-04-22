@@ -55,8 +55,8 @@ export default function Projects() {
           /> */}
           <CardProjectV2
             subtitle="TheLandlord"
-            title="From Legacy Codebase to Award-Winning PropTech Platform"
-            description="Took a broken, slow, single-tenant rental platform and rebuilt it from the ground up — modernizing a Laravel legacy codebase, redesigning the entire manager interface, and migrating to a scalable multi-tenant architecture. Integrated 50+ booking channels via Rentals United, built a full CRM, owner portal, and analytics dashboards. Resolved critical security vulnerabilities, cut SQL queries from 1000+ to ~10 on key modules, and delivered 9 months of continuous support. The platform went on to be recognized at the Global Proptech & Contech Awards 2026 in Dubai."
+            title="Award-Winning PropTech Platform"
+            description="Took a legacy codebase, slow, single-tenant rental platform and rebuilt it from the ground up — modernizing a Laravel legacy codebase, redesigning the entire manager interface, and migrating to a scalable multi-tenant architecture. Integrated 50+ booking channels via Rentals United, built a full CRM, owner portal, and analytics dashboards. Resolved critical security vulnerabilities, cut SQL queries from 1000+ to ~10 on key modules, and delivered 9 months of continuous support. The platform went on to be recognized at the Global Proptech & Contech Awards 2026 in Dubai."
             imageSrc={thelandlord}
             techStack={[
               "Laravel",
@@ -106,7 +106,7 @@ export default function Projects() {
           /> */}
           <CardProjectV2
             subtitle="SOGECOR"
-            title="Industrial Authority, Online"
+            title="B2B Industrial Sales Platform"
             description="SOGECOR had 30 years of expertise and zero web presence. Two meetings, one MVP delivered the next day, a closed deal, and a finished product in one week. The result: a full B2B platform with a 3000+ product catalog scraped from supplier sites, advanced technical search, an RFQ module for qualified leads, and centralized technical documentation — built not as a brochure, but as a lead generation engine that positions SOGECOR as a technical authority, not just a distributor."
             imageSrc={sogecor}
             techStack={["Next.js", "Tailwind CSS", "Sanity CMS", "Shadcn UI"]}

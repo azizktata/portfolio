@@ -22,11 +22,11 @@ const socialLinks = [
     icon: SiGithub,
     label: "GitHub",
   },
-  {
-    href: "mailto:azizktata77@gmail.com",
-    icon: Mail,
-    label: "Email",
-  },
+  // {
+  //   href: "mailto:azizktata77@gmail.com",
+  //   icon: Mail,
+  //   label: "Email",
+  // },
 ];
 
 export function BottomNavbar() {
