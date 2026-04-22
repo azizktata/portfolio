@@ -8,6 +8,10 @@ import CardProject from "@/components/card-project";
 import Link from "next/link";
 import CardExperiance from "@/components/card-experiance";
 import TechStack from "@/components/tech-stack";
+import ContactForm from "@/components/contact-form";
+import mbio7 from "../public/mbio7.png";
+import sakan from "../public/sakan.jpg";
+import sogecor from "../public/sogecor.jpg";
 
 export default function Home() {
   return (
@@ -70,18 +74,24 @@ export default function Home() {
               </Link>
             </div> */}
           </div>
+          <div className="mt-8 w-full max-w-sm">
+            <ContactForm />
+          </div>
         </div>
         <div id="right" className="flex flex-col md:py-24 max-w-2xl">
           <h2 className="uppercase font-bold text-md mb-6">About</h2>
           <div className="mb-8 flex flex-col gap-4">
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              I’m a developer passionate about building high-quality digital
-              products, I enjoy solving complex problems and continuously learning new technologies.
+              I build digital products that perform — from complex platforms to
+              conversion-focused marketing sites. I take ownership of the full
+              cycle: strategy, design, development, and delivery.
             </p>
             <p className="text-sm max-w-xl md:max-w-md lg:max-w-xl text-foreground leading-relaxed">
-              Specializing in building scalable web platforms from
-              architecture to production. I worked with Laravel, React, Next.js,
-              Springboot & Angular, delivering tailored solutions for diverse clients, from startups to established enterprises.
+              My work spans SaaS platforms, B2B tools, marketplaces, and brand
+              websites — built with Laravel, React, Next.js, and everything in
+              between. Clients range from Tunisian startups to international
+              companies, and the standard is always the same: fast, scalable,
+              and built to last.
             </p>
           </div>
           <div className="mb-12">
@@ -94,10 +104,10 @@ export default function Home() {
                 timeline="2025 - Present"
                 position="Full Stack Developer @ Asis.tn"
                 description={[
-                  "Responsible for building web platforms from design to deployment, using Next.js, Tailwind CSS, and Headless WordPress.",
-                  "Managed the migration of legacy Laravel systems, delivering complete UI/UX redesigns and implementing multi-tenant architectures.",
-                  "Optimized application performance and scalability by refactoring code for better readability, refining database queries, and implementing caching strategies.",
-                  "Handled continuous production support, resolving critical bugs and deploying new features to ensure system stability.",
+                  "Rebuilt legacy Laravel platforms into modern, scalable web applications — handling architecture, UI/UX redesign, multi-tenant migrations, and production deployment end-to-end.",
+                  "Delivered marketing websites and B2B platforms for clients across Tunisia and internationally, from first meeting to live product.",
+                  "Cut critical query loads from 1000+ to ~10, resolved security vulnerabilities, and implemented caching strategies that measurably improved performance.",
+                  "Provided ongoing production support across multiple live platforms — bug fixes, feature rollouts, and system stability under real usage.",
                 ]}
                 techStack={[
                   "Laravel",
@@ -116,11 +126,11 @@ export default function Home() {
               />
               <CardExperiance
                 timeline="2024 / 6 months"
-                position="Full stack developer intern @ Sofrecom"
+                position="Full Stack Developer Intern @ Sofrecom"
                 description={[
-                  "Collaborated in an Agile environment to develop a single-page application for managing complaints using Spring Boot, JWT-based RBAC, and Angular.",
-                  "Integrated and fine-tuned a Large Language Model (LLM) to automate complaint categorization and generate intelligent customer support responses.",
-                  "Automated the development lifecycle by implementing CI/CD pipelines with GitLab and Ansible for seamless testing and deployment.",
+                  "Built a complaint management SPA in an Agile team using Spring Boot and Angular, with JWT-based role access control.",
+                  "Integrated and fine-tuned an LLM to automate complaint categorization and generate intelligent customer support responses — reducing manual handling time.",
+                  "Implemented CI/CD pipelines with GitLab and Ansible, automating testing and deployment across the development lifecycle.",
                 ]}
                 techStack={[
                   "Springboot",
@@ -153,50 +163,49 @@ export default function Home() {
             <h2 className="text-md font-bold mb-6 uppercase">Projects</h2>
             <div className="group/list">
               <CardProject
-                title="جامعة كبار العلماء"
-                description="Senior scholars project to facilitate the students of knowledge to learn Islamic sciences, with a curriculum according to the College of Sharia at Muhammad bin Saud Islamic University, and the audios were selected for the sheikhs of senior scholars and on the university's curriculum."
-                // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
-                imageSrc={kibbaroulama}
-                link="https://kibbarulmauniversity.netlify.app/"
-                techStack={["Next.js", "Tailwind CSS", "Turso"]}
-              />
-              <CardProject
-                title="Property rental management system"
-                description="A multi-tenant SaaS platform for property rental management with a certified channel manager (50+ booking platforms), full reservation lifecycle management, owner & guest portals, CRM, accounting, and automation. Currently used by 10 active users."
-                // The system includes a certified channel manager connected to 50+ global booking platforms, end-to-end reservation management, owner and guest portals, online check-in, CRM, accounting, and automation features.
+                title="Award-Winning PropTech Platform"
+                description="Rebuilt a broken rental platform from the ground up — new architecture, new design, 50+ booking channel integrations, full CRM, and critical security fixes. Recognized at the Global Proptech & Contech Awards 2026 in Dubai."
                 imageSrc={thelandlord}
-                // link="https://new-manager.thelandlord.tn/dashboard"
-                techStack={["Laravel", "React", "Tailwind CSS", "MySQL"]}
-                link="/projects#thelandlord"
-              />
-              <CardProject
-                title="Timesheet accounting system"
-                description="Timesheet accounting system that simplifies tracking and managing employee work hours for accurate payroll processing."
-                imageSrc={timesheet}
                 techStack={[
                   "Laravel",
+                  "Inertia.js",
                   "React",
                   "Tailwind CSS",
                   "MySQL",
-                  "Docker",
                 ]}
-                link="/projects#timesheet"
+                link="/projects#thelandlord"
               />
-              {/* <CardProject
-                title="E-commerce platform"
-                description="A modern e-commerce solution with a user-friendly storefront, admin dashboard, and general features like product management and shopping cart"
-                imageSrc={ramtec}
+              <CardProject
+                title="B2B Industrial Sales Platform"
+                description="Turned 30 years of expertise into a lead generation engine — 3000+ product catalog, technical search, RFQ module, and full documentation hub. MVP delivered in one day, full product in one week."
+                imageSrc={sogecor}
                 techStack={[
                   "Next.js",
-                  "TypeScript",
                   "Tailwind CSS",
-                  "Prisma",
-                  "PostgreSQL",
-                  "NextAuth",
-                  "Redux",
+                  "Sanity CMS",
+                  "Shadcn UI",
                 ]}
-                link="/projects#ramtec"
-              /> */}
+                link="https://sogecor.netlify.app/"
+              />
+              <CardProject
+                title="Full-Stack Real Estate Marketplace"
+                description="Client wanted a Mubawab-level platform by Friday. Delivered in 4 days — map & grid listings, client dashboard, admin panel, and full Laravel backend. Designed, built, and deployed end-to-end."
+                imageSrc={sakan}
+                techStack={["Next.js", "TypeScript", "Laravel", "MySQL"]}
+                link="https://sakan1.netlify.app/"
+              />
+              <CardProject
+                title="Global Marketing Site for Deep-Tech Startup"
+                description="Built the multilingual international website for a French startup with a patented sustainable construction technology — designed to open doors with investors, architects, and buyers worldwide."
+                imageSrc={mbio7}
+                techStack={[
+                  "Next.js",
+                  "Tailwind CSS",
+                  "i18n",
+                  "WordPress Headless CMS",
+                ]}
+                link="https://mbio7.com/"
+              />
             </div>
 
             <Link href="/projects">
