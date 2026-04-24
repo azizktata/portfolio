@@ -110,7 +110,7 @@ export default function Projects() {
             description="SOGECOR had 30 years of expertise and zero web presence. Two meetings, one MVP delivered the next day, a closed deal, and a finished product in one week. The result: a full B2B platform with a 3000+ product catalog scraped from supplier sites, advanced technical search, an RFQ module for qualified leads, and centralized technical documentation — built not as a brochure, but as a lead generation engine that positions SOGECOR as a technical authority, not just a distributor."
             imageSrc={sogecor}
             techStack={["Next.js", "Tailwind CSS", "Sanity CMS", "Shadcn UI"]}
-            liveDemo="https://sakan1.netlify.app/"
+            liveDemo="https://sogecor.netlify.app/"
           />
           <CardProjectV2
             subtitle="Timesheet"
@@ -162,6 +162,13 @@ export default function Projects() {
             liveDemo="https://www.dolphinequipements.tn/"
             inverted={true}
           />
+          {/* <CardProjectV2
+            subtitle="Fire management company"
+            title="Fire safety engineering company website"
+            description="Designed and built a website for a Tunisian fire safety engineering company. The site features a clean, professional design that communicates the company’s expertise and reliability. Built with Next.js and Tailwind CSS, the site is fast, responsive, and easy to navigate — giving the client a strong online presence in a critical industry."
+            imageSrc={dolphin}
+            techStack={["Next.js", "CSS"]} */}
+
           {/* <CardProjectV2
             subtitle="Dolphin Equipements"
             title="Industrial Equipment Distribution"
